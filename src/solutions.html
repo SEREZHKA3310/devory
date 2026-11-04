@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0c0d" />
+    <title>Решения: демонстрационные примеры | DEVORY</title>
+    <meta name="robots" content="noindex,follow" />
+    <meta
+      name="description"
+      content="Тестовые примеры решений Devory: личный кабинет, интеграция заказов и рабочее место поддержки. Все данные демонстрационные."
+    />
+    <link rel="canonical" href="https://devory.digital" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Решения: демонстрационные примеры | DEVORY" />
+    <meta
+      property="og:description"
+      content="Тестовые примеры решений Devory: личный кабинет, интеграция заказов и рабочее место поддержки. Все данные демонстрационные."
+    />
+    <meta property="og:url" content="https://devory.digital/solutions" />
+    <meta property="og:image" content="/assets/scene.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/page-v3.css" />
+    <link rel="stylesheet" href="/site.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body class="subpage" id="top">
+    <a class="skip" href="#main">К содержимому</a
+    ><svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path d="M6 18 18 6M7 6h11v11" />
+        </symbol>
+        <symbol id="chevron" viewBox="0 0 24 24">
+          <path d="m6 9 6 6 6-6" />
+        </symbol>
+        <symbol id="layers" viewBox="0 0 36 36">
+          <path d="m3 12 15-8 15 8-15 8-15-8Zm0 7 15 8 15-8M3 26l15 8 15-8" />
+        </symbol>
+        <symbol id="bolt" viewBox="0 0 36 36">
+          <path d="m22 2-16 20h12l-3 12 15-20H19l3-12Z" />
+        </symbol>
+        <symbol id="growth" viewBox="0 0 36 36">
+          <path d="M3 32h29M7 31v-6m8 6V19m8 12V12m8 19V5" />
+        </symbol>
+        <symbol id="cloud" viewBox="0 0 36 36">
+          <path d="M10 30a9 9 0 0 1-1-18 10 10 0 0 1 19-1 9.5 9.5 0 0 1-1 19H10Z" />
+        </symbol>
+      </defs>
+    </svg>
+    <header class="header">
+      <a class="brand" href="/" aria-label="Devory — главная"
+        ><svg viewBox="0 0 50 48" aria-hidden="true">
+          <path d="M4 4h20a20 20 0 0 1 0 40H4Z" fill="none" stroke="#f4513d" stroke-width="5" />
+          <path
+            d="M13 13h11a11 11 0 0 1 0 22H13V13Zm0 11h12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+          /></svg
+        ><span>Devory</span></a
+      >
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/services"
+          >Услуги <svg><use href="#chevron" /></svg
+        ></a>
+        <a href="/solutions" aria-current="page"
+          >Решения <svg><use href="#chevron" /></svg
+        ></a>
+        <a href="/technology">Технологии</a><a href="/about">О нас</a
+        ><a href="/contacts">Контакты</a>
+      </nav>
+      <a class="button primary header-cta" href="/contacts"
+        >Обсудить проект <svg><use href="#arrow" /></svg
+      ></a>
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Открыть меню"
+      >
+        <span></span><span></span>
+      </button>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
+        <a href="/services">Услуги</a><a href="/solutions" aria-current="page">Решения</a
+        ><a href="/technology">Технологии</a><a href="/about">О нас</a
+        ><a href="/contacts">Контакты</a>
+      </nav>
+    </header>
+    <main id="main" class="submain">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span
+        ><span aria-current="page">Решения</span>
+      </nav>
+      <div class="sub-intro">
+        <p class="dv-label">Примеры формата работы</p>
+        <h1>Как может выглядеть<br />ваше решение.</h1>
+        <p class="sub-lead">
+          Здесь собраны тестовые сценарии цифровых продуктов и интеграций. Они показывают структуру
+          задачи и возможный состав решения.
+        </p>
+      </div>
+      <p class="demo-notice">
+        <strong>Демонстрационный раздел.</strong> Компании, записи и интерфейсы вымышлены. Примеры
+        не являются клиентскими кейсами.
+      </p>
+      <div class="demo-filters" role="group" aria-label="Фильтр решений">
+        <button aria-pressed="true" data-filter="all">Все примеры</button
+        ><button aria-pressed="false" data-filter="product">Веб-продукты</button
+        ><button aria-pressed="false" data-filter="integration">Интеграции</button
+        ><button aria-pressed="false" data-filter="support">Внутренние сервисы</button>
+      </div>
+      <p class="filter-status" role="status" id="filter-status">Показано примеров: 3</p>
+      <div class="demo-grid">
+        <article class="demo-card" data-demo-type="product">
+          <a href="/solution-client-portal"
+            ><div class="demo-preview product">
+              <span class="demo-badge">Тестовый пример</span>
+              <div class="preview-screen">
+                <div class="preview-top"><i></i><i></i><i></i></div>
+                <strong>Личный кабинет клиента</strong>
+                <div class="preview-row"><span>Заявка #1042</span><b>Согласование</b></div>
+                <div class="preview-row"><span>Заявка #1041</span><b>В работе</b></div>
+                <div class="preview-row"><span>Заявка #1038</span><b>Завершена</b></div>
+              </div>
+            </div>
+            <div class="demo-copy">
+              <p class="dv-label">Веб-продукт</p>
+              <h2>Личный кабинет клиента</h2>
+              <p>
+                Тестовый пример кабинета для заявок, документов и истории взаимодействия. Данные
+                вымышлены и используются для демонстрации интерфейса.
+              </p>
+              <span class="dv-link"
+                >Открыть пример <svg aria-hidden="true"><use href="#arrow" /></svg
+              ></span></div
+          ></a>
+        </article>
+        <article class="demo-card" data-demo-type="integration">
+          <a href="/solution-order-flow"
+            ><div class="demo-preview integration">
+              <span class="demo-badge">Тестовый пример</span>
+              <div class="preview-screen">
+                <div class="preview-top"><i></i><i></i><i></i></div>
+                <strong>Заказ между сайтом, CRM и учётом</strong>
+                <div class="preview-row"><span>Заказ DEMO-021</span><b>Передан в CRM</b></div>
+                <div class="preview-row">
+                  <span>Заказ DEMO-020</span><b>Ожидает подтверждения</b>
+                </div>
+                <div class="preview-row"><span>Заказ DEMO-019</span><b>Обмен завершён</b></div>
+              </div>
+            </div>
+            <div class="demo-copy">
+              <p class="dv-label">Автоматизация</p>
+              <h2>Заказ между сайтом, CRM и учётом</h2>
+              <p>
+                Тестовая схема обмена заказами и статусами между тремя системами. Названия и записи
+                демонстрационные.
+              </p>
+              <span class="dv-link"
+                >Открыть пример <svg aria-hidden="true"><use href="#arrow" /></svg
+              ></span></div
+          ></a>
+        </article>
+        <article class="demo-card" data-demo-type="support">
+          <a href="/solution-service-desk"
+            ><div class="demo-preview support">
+              <span class="demo-badge">Тестовый пример</span>
+              <div class="preview-screen">
+                <div class="preview-top"><i></i><i></i><i></i></div>
+                <strong>Рабочее место команды поддержки</strong>
+                <div class="preview-row">
+                  <span>Обращение DEMO-078</span><b>Высокий приоритет</b>
+                </div>
+                <div class="preview-row">
+                  <span>Обращение DEMO-077</span><b>Обычный приоритет</b>
+                </div>
+                <div class="preview-row">
+                  <span>Обращение DEMO-076</span><b>Обычный приоритет</b>
+                </div>
+              </div>
+            </div>
+            <div class="demo-copy">
+              <p class="dv-label">Внутренний сервис</p>
+              <h2>Рабочее место команды поддержки</h2>
+              <p>
+                Тестовый пример внутренней системы обращений. Показывает очередь задач, приоритеты и
+                распределение ответственности.
+              </p>
+              <span class="dv-link"
+                >Открыть пример <svg aria-hidden="true"><use href="#arrow" /></svg
+              ></span></div
+          ></a>
+        </article>
+      </div>
+      <section class="sub-cta">
+        <div>
+          <p class="dv-label">Следующий шаг</p>
+          <h2>Есть похожая задача?</h2>
+          <p>Расскажите о своём процессе. Состав решения определим по вашим требованиям.</p>
+        </div>
+        <a class="button primary" href="/contacts"
+          >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+        ></a>
+      </section>
+    </main>
+    <footer class="release-footer">
+      <div class="release-footer-top">
+        <a class="dv-footer-logo" href="/">Devory<span>Digital engineering</span></a>
+        <div>
+          <h2>Услуги</h2>
+          <a href="/development">Разработка продуктов</a
+          ><a href="/automation">Автоматизация и интеграции</a
+          ><a href="/growth">Продвижение и рост</a><a href="/support">Поддержка и инфраструктура</a>
+        </div>
+        <div>
+          <h2>О проекте</h2>
+          <a href="/solutions">Решения</a><a href="/technology">Технологии</a
+          ><a href="/about">О Devory</a><a href="/contacts">Обсудить проект</a>
+        </div>
+        <div class="footer-offline">
+          <h2>Начните с задачи</h2>
+          <p>Опишите продукт или процесс.<br />Сохраните бриф для обсуждения.</p>
+          <a class="dv-link" href="/contacts"
+            >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+          ></a>
+        </div>
+      </div>
+      <div class="release-footer-bottom">
+        <span>© 2026 Devory</span><span>Разработка · Автоматизация · Поддержка</span
+        ><a href="#top">Наверх ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

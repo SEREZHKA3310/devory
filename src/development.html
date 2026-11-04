@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0c0d" />
+    <title>Разработка продуктов | DEVORY</title>
+    <meta
+      name="description"
+      content="Проектируем и разрабатываем веб-продукты и сервисы: от требований и прототипа до запуска и сопровождения. Результат можно использовать и развивать."
+    />
+    <link rel="canonical" href="https://devory.digital" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Разработка продуктов | DEVORY" />
+    <meta
+      property="og:description"
+      content="Проектируем и разрабатываем веб-продукты и сервисы: от требований и прототипа до запуска и сопровождения. Результат можно использовать и развивать."
+    />
+    <meta property="og:url" content="https://devory.digital/development" />
+    <meta property="og:image" content="/assets/scene.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/page-v3.css" />
+    <link rel="stylesheet" href="/site.css" />
+    <script src="site.js" type="module" defer></script>
+    <script src="barchart.js" type="module" defer></script>
+  </head>
+
+  <body class="subpage" id="top">
+    <a class="skip" href="#main">К содержимому</a>
+
+    <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path d="M6 18 18 6M7 6h11v11" />
+        </symbol>
+        <symbol id="chevron" viewBox="0 0 24 24">
+          <path d="m6 9 6 6 6-6" />
+        </symbol>
+        <symbol id="layers" viewBox="0 0 36 36">
+          <path d="m3 12 15-8 15 8-15 8-15-8Zm0 7 15 8 15-8M3 26l15 8 15-8" />
+        </symbol>
+        <symbol id="bolt" viewBox="0 0 36 36">
+          <path d="m22 2-16 20h12l-3 12 15-20H19l3-12Z" />
+        </symbol>
+        <symbol id="growth" viewBox="0 0 36 36">
+          <path d="M3 32h29M7 31v-6m8 6V19m8 12V12m8 19V5" />
+        </symbol>
+        <symbol id="cloud" viewBox="0 0 36 36">
+          <path d="M10 30a9 9 0 0 1-1-18 10 10 0 0 1 19-1 9.5 9.5 0 0 1-1 19H10Z" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="header">
+      <a class="brand" href="/" aria-label="Devory — главная">
+        <svg viewBox="0 0 50 48" aria-hidden="true">
+          <path d="M4 4h20a20 20 0 0 1 0 40H4Z" fill="none" stroke="#f4513d" stroke-width="5" />
+          <path
+            d="M13 13h11a11 11 0 0 1 0 22H13V13Zm0 11h12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+          />
+        </svg>
+        <span>Devory</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/services" aria-current="page"
+          >Услуги <svg><use href="#chevron" /></svg
+        ></a>
+        <a href="/solutions"
+          >Решения <svg><use href="#chevron" /></svg
+        ></a>
+        <a href="/technology">Технологии</a>
+        <a href="/about">О нас</a>
+        <a href="/contacts">Контакты</a>
+      </nav>
+
+      <a class="button primary header-cta" href="/contacts"
+        >Обсудить проект <svg><use href="#arrow" /></svg
+      ></a>
+
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Открыть меню"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
+        <a href="/services" aria-current="page">Услуги</a>
+        <a href="/solutions">Решения</a>
+        <a href="/technology">Технологии</a>
+        <a href="/about">О нас</a>
+        <a href="/contacts">Контакты</a>
+      </nav>
+    </header>
+
+    <main id="main" class="submain">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a>
+        <span aria-hidden="true">/</span>
+        <a href="/services">Услуги</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Разработка продуктов</span>
+      </nav>
+
+      <div class="service-heading">
+        <div class="sub-intro">
+          <p class="dv-label">Веб-продукты и сервисы</p>
+          <h1>Идея становится продуктом, который работает.</h1>
+          <p class="sub-lead">
+            Проектируем и разрабатываем веб-приложения и сервисы: от требований и прототипа до
+            запуска. Результат можно использовать, поддерживать и развивать дальше.
+          </p>
+          <a class="button primary" href="/contacts"
+            >Подготовить задачу <svg aria-hidden="true"><use href="#arrow" /></svg
+          ></a>
+        </div>
+
+        <div class="service-object" aria-hidden="true">
+          <div class="service-object-layer"></div>
+          <div class="service-object-layer"></div>
+          <div class="service-object-layer">
+            <svg><use href="#layers" /></svg>
+          </div>
+        </div>
+      </div>
+
+      <section class="sub-section">
+        <p class="dv-label">Когда это нужно</p>
+        <h2>Узнаёте свою ситуацию?</h2>
+        <div class="content-grid">
+          <article>
+            <h3>Есть идея, но нет продукта</h3>
+            <p>
+              Понятно, что нужно сделать, но неясно, с чего начать, какие функции важны в первой
+              версии и сколько это займёт.
+            </p>
+          </article>
+          <article>
+            <h3>Текущая система не справляется</h3>
+            <p>
+              Рабочие процессы держатся на таблицах и разрозненных сервисах. Добавлять новые
+              возможности становится всё сложнее.
+            </p>
+          </article>
+          <article>
+            <h3>Нужна первая версия для проверки</h3>
+            <p>
+              Требуется быстро показать продукт пользователям или заказчику, получить обратную связь
+              и решить, куда развиваться.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sub-section">
+        <p class="dv-label">Внутри проекта</p>
+        <h2>Что входит в работу</h2>
+        <div class="scope-list">
+          <article>
+            <span class="scope-marker" aria-hidden="true"></span>
+            <h3>Анализ и требования</h3>
+            <p>
+              Уточняем цели, пользователей и сценарии. Определяем состав первой версии и то, что
+              оставляем на следующие этапы.
+            </p>
+          </article>
+          <article>
+            <span class="scope-marker" aria-hidden="true"></span>
+            <h3>Проект и прототип</h3>
+            <p>
+              Описываем структуру экранов, данные и логику работы. Показываем прототип до начала
+              разработки, чтобы согласовать решение.
+            </p>
+          </article>
+          <article>
+            <span class="scope-marker" aria-hidden="true"></span>
+            <h3>Разработка</h3>
+            <p>
+              Реализуем интерфейс и серверную часть, подключаем нужные сервисы. Работаем этапами и
+              показываем промежуточные результаты.
+            </p>
+          </article>
+          <article>
+            <span class="scope-marker" aria-hidden="true"></span>
+            <h3>Тестирование и запуск</h3>
+            <p>
+              Проверяем основные и ошибочные сценарии, настраиваем окружение и выпускаем продукт.
+              Передаём описание для дальнейшей работы.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="result-slab">
+        <div>
+          <p class="dv-label">На выходе</p>
+          <h2>Результат, который<br />можно запускать и развивать.</h2>
+        </div>
+        <ul>
+          <li>Согласованные требования и состав первой версии</li>
+          <li>Работающий продукт, развёрнутый в выбранном окружении</li>
+          <li>Исходный код и доступы, переданные заказчику</li>
+          <li>Описание настроек, запуска и порядка сопровождения</li>
+        </ul>
+      </section>
+
+      <section class="sub-section split-copy">
+        <div>
+          <p class="dv-label">Приёмка</p>
+          <h2>Как проверяем готовность</h2>
+          <p>
+            Сверяем результат с согласованными требованиями и проходим основные сценарии вместе с
+            заказчиком. Отдельно проверяем ошибочные ситуации, права доступа и работу на разных
+            устройствах.
+          </p>
+        </div>
+        <div>
+          <p class="dv-label">Оценка</p>
+          <h2>Что влияет на объём</h2>
+          <p>
+            На сроки и стоимость влияют число ролей и сценариев, сложность логики, интеграции со
+            сторонними сервисами и требования к дизайну. Для точной оценки сначала уточняем состав
+            работ.
+          </p>
+        </div>
+      </section>
+
+      <section class="sub-section">
+        <p class="dv-label">Наглядность</p>
+        <h2>Наведём красоту</h2>
+        <p>
+          Анимированная диаграмма превращает сухие цифры в понятную картинку, где главное видно с
+          первого взгляда.
+        </p>
+        <table class="revenue-table" hidden>
+          <tr class="revenue-table__head">
+            <th>Месяц</th>
+            <th>
+              Выручка, ₽
+              <tr class="revenue-table__row">
+                <td>Янв 2026</td>
+                <td>
+                  42 000
+                  <tr class="revenue-table__row">
+                    <td>Фев 2026</td>
+                    <td>
+                      58 000
+                      <tr class="revenue-table__row">
+                        <td>Мар 2026</td>
+                        <td>
+                          51 000
+                          <tr class="revenue-table__row">
+                            <td>Апр 2026</td>
+                            <td>
+                              73 000
+                              <tr class="revenue-table__row">
+                                <td>Май 2026</td>
+                                <td>
+                                  96 000
+                                  <tr class="revenue-table__row">
+                                    <td>Июн 2026</td>
+                                    <td>88 000</td>
+                                  </tr>
+                                </td>
+                              </tr>
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </th>
+          </tr>
+        </table>
+        <div class="revenue-chart">
+          <span class="revenue-chart__tip" hidden></span>
+        </div>
+      </section>
+
+      <section class="sub-section">
+        <p class="dv-label">До начала работ</p>
+        <h2>Частые вопросы</h2>
+        <div class="dv-faq-grid">
+          <details>
+            <summary>Можно начать с небольшой первой версии?<span>↗</span></summary>
+            <p>
+              Да. Лучше выпустить версию с основными функциями, проверить её на реальных
+              пользователях и затем расширять, чем делать всё сразу.
+            </p>
+          </details>
+          <details>
+            <summary>Что нужно для начала работы?<span>↗</span></summary>
+            <p>
+              Достаточно описания задачи своими словами. Остальные детали уточняем на первом этапе и
+              фиксируем в требованиях.
+            </p>
+          </details>
+          <details>
+            <summary>Кому принадлежит код после завершения?<span>↗</span></summary>
+            <p>
+              Порядок передачи кода и доступов оговаривается заранее и фиксируется в договорённостях
+              по проекту.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="sub-cta">
+        <div>
+          <p class="dv-label">Следующий шаг</p>
+          <h2>Обсудим вашу задачу</h2>
+          <p>
+            Расскажите, что нужно создать или улучшить. Для первого разговора достаточно описания
+            своими словами.
+          </p>
+        </div>
+        <a class="button primary" href="/contacts"
+          >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+        ></a>
+      </section>
+
+      <section class="related">
+        <h2>Другие направления</h2>
+        <div>
+          <a class="dv-link" href="/automation"
+            >Автоматизация и интеграции <svg aria-hidden="true"><use href="#arrow" /></svg
+          ></a>
+          <a class="dv-link" href="/growth"
+            >Продвижение и рост <svg aria-hidden="true"><use href="#arrow" /></svg
+          ></a>
+          <a class="dv-link" href="/support"
+            >Поддержка и инфраструктура <svg aria-hidden="true"><use href="#arrow" /></svg
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="release-footer">
+      <div class="release-footer-top">
+        <a class="dv-footer-logo" href="/">Devory<span>Digital engineering</span></a>
+
+        <div>
+          <h2>Услуги</h2>
+          <a href="/development">Разработка продуктов</a>
+          <a href="/automation">Автоматизация и интеграции</a>
+          <a href="/growth">Продвижение и рост</a>
+          <a href="/support">Поддержка и инфраструктура</a>
+        </div>
+
+        <div>
+          <h2>О проекте</h2>
+          <a href="/solutions">Решения</a>
+          <a href="/technology">Технологии</a>
+          <a href="/about">О Devory</a>
+          <a href="/contacts">Обсудить проект</a>
+        </div>
+
+        <div class="footer-offline">
+          <h2>Начните с задачи</h2>
+          <p>Опишите продукт или процесс.<br />Сохраните бриф для обсуждения.</p>
+          <a class="dv-link" href="/contacts"
+            >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+          ></a>
+        </div>
+      </div>
+
+      <div class="release-footer-bottom">
+        <span>© 2026 Devory</span>
+        <span>Разработка · Автоматизация · Поддержка</span>
+        <a href="#top">Наверх ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
