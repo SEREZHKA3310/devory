@@ -1,0 +1,281 @@
+{% extends "main/base.html" %} {% load static %} {% block head %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="theme-color" content="#0b0c0d" />
+<title>Разработка продуктов | DEVORY</title>
+<meta
+  name="description"
+  content="Проектируем и разрабатываем веб-продукты и сервисы: от требований и прототипа до запуска и сопровождения. Результат можно использовать и развивать."
+/>
+<link rel="canonical" href="https://devory.digital" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Разработка продуктов | DEVORY" />
+<meta
+  property="og:description"
+  content="Проектируем и разрабатываем веб-продукты и сервисы: от требований и прототипа до запуска и сопровождения. Результат можно использовать и развивать."
+/>
+<meta property="og:url" content="https://devory.digital/development/" />
+<meta
+  property="og:image"
+  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
+<link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
+<link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<script src="{% static 'main/site.js' %}" type="module" defer></script>
+<script src="{% static 'main/barchart.js' %}" type="module" defer></script>
+{% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
+<main id="main" class="submain">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="{% url 'main:index' %}">Главная</a>
+    <span aria-hidden="true">/</span>
+    <a href="{% url 'main:services' %}">Услуги</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Разработка продуктов</span>
+  </nav>
+
+  <div class="service-heading">
+    <div class="sub-intro">
+      <p class="dv-label">Веб-продукты и сервисы</p>
+      <h1>Идея становится продуктом, который работает.</h1>
+      <p class="sub-lead">
+        Проектируем и разрабатываем веб-приложения и сервисы: от требований и
+        прототипа до запуска. Результат можно использовать, поддерживать и
+        развивать дальше.
+      </p>
+      <a class="button primary" href="{% url 'main:contacts' %}"
+        >Подготовить задачу <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+    </div>
+
+    <div class="service-object" aria-hidden="true">
+      <div class="service-object-layer"></div>
+      <div class="service-object-layer"></div>
+      <div class="service-object-layer">
+        <svg><use href="#layers" /></svg>
+      </div>
+    </div>
+  </div>
+
+  <section class="sub-section">
+    <p class="dv-label">Когда это нужно</p>
+    <h2>Узнаёте свою ситуацию?</h2>
+    <div class="content-grid">
+      <article>
+        <h3>Есть идея, но нет продукта</h3>
+        <p>
+          Понятно, что нужно сделать, но неясно, с чего начать, какие функции
+          важны в первой версии и сколько это займёт.
+        </p>
+      </article>
+      <article>
+        <h3>Текущая система не справляется</h3>
+        <p>
+          Рабочие процессы держатся на таблицах и разрозненных сервисах.
+          Добавлять новые возможности становится всё сложнее.
+        </p>
+      </article>
+      <article>
+        <h3>Нужна первая версия для проверки</h3>
+        <p>
+          Требуется быстро показать продукт пользователям или заказчику,
+          получить обратную связь и решить, куда развиваться.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="sub-section">
+    <p class="dv-label">Внутри проекта</p>
+    <h2>Что входит в работу</h2>
+    <div class="scope-list">
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Анализ и требования</h3>
+        <p>
+          Уточняем цели, пользователей и сценарии. Определяем состав первой
+          версии и то, что оставляем на следующие этапы.
+        </p>
+      </article>
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Проект и прототип</h3>
+        <p>
+          Описываем структуру экранов, данные и логику работы. Показываем
+          прототип до начала разработки, чтобы согласовать решение.
+        </p>
+      </article>
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Разработка</h3>
+        <p>
+          Реализуем интерфейс и серверную часть, подключаем нужные сервисы.
+          Работаем этапами и показываем промежуточные результаты.
+        </p>
+      </article>
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Тестирование и запуск</h3>
+        <p>
+          Проверяем основные и ошибочные сценарии, настраиваем окружение и
+          выпускаем продукт. Передаём описание для дальнейшей работы.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="result-slab">
+    <div>
+      <p class="dv-label">На выходе</p>
+      <h2>Результат, который<br />можно запускать и развивать.</h2>
+    </div>
+    <ul>
+      <li>Согласованные требования и состав первой версии</li>
+      <li>Работающий продукт, развёрнутый в выбранном окружении</li>
+      <li>Исходный код и доступы, переданные заказчику</li>
+      <li>Описание настроек, запуска и порядка сопровождения</li>
+    </ul>
+  </section>
+
+  <section class="sub-section split-copy">
+    <div>
+      <p class="dv-label">Приёмка</p>
+      <h2>Как проверяем готовность</h2>
+      <p>
+        Сверяем результат с согласованными требованиями и проходим основные
+        сценарии вместе с заказчиком. Отдельно проверяем ошибочные ситуации,
+        права доступа и работу на разных устройствах.
+      </p>
+    </div>
+    <div>
+      <p class="dv-label">Оценка</p>
+      <h2>Что влияет на объём</h2>
+      <p>
+        На сроки и стоимость влияют число ролей и сценариев, сложность логики,
+        интеграции со сторонними сервисами и требования к дизайну. Для точной
+        оценки сначала уточняем состав работ.
+      </p>
+    </div>
+  </section>
+
+  <section class="sub-section">
+    <p class="dv-label">Наглядность</p>
+    <h2>Наведём красоту</h2>
+    <p>
+      Анимированная диаграмма превращает сухие цифры в понятную картинку, где
+      главное видно с первого взгляда.
+    </p>
+    <table class="revenue-table" hidden>
+      <tr class="revenue-table__head">
+        <th>Месяц</th>
+        <th>
+          Выручка, ₽
+          <tr class="revenue-table__row">
+            <td>Янв 2026</td>
+            <td>
+              42 000
+              <tr class="revenue-table__row">
+                <td>Фев 2026</td>
+                <td>
+                  58 000
+                  <tr class="revenue-table__row">
+                    <td>Мар 2026</td>
+                    <td>
+                      51 000
+                      <tr class="revenue-table__row">
+                        <td>Апр 2026</td>
+                        <td>
+                          73 000
+                          <tr class="revenue-table__row">
+                            <td>Май 2026</td>
+                            <td>
+                              96 000
+                              <tr class="revenue-table__row">
+                                <td>Июн 2026</td>
+                                <td>88 000</td>
+                              </tr>
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </td>
+              </tr>
+            </td>
+          </tr>
+        </th>
+      </tr>
+    </table>
+    <div class="revenue-chart">
+      <span class="revenue-chart__tip" hidden></span>
+    </div>
+  </section>
+
+  <section class="sub-section">
+    <p class="dv-label">До начала работ</p>
+    <h2>Частые вопросы</h2>
+    <div class="dv-faq-grid">
+      <details>
+        <summary>Можно начать с небольшой первой версии?<span>↗</span></summary>
+        <p>
+          Да. Лучше выпустить версию с основными функциями, проверить её на
+          реальных пользователях и затем расширять, чем делать всё сразу.
+        </p>
+      </details>
+      <details>
+        <summary>Что нужно для начала работы?<span>↗</span></summary>
+        <p>
+          Достаточно описания задачи своими словами. Остальные детали уточняем
+          на первом этапе и фиксируем в требованиях.
+        </p>
+      </details>
+      <details>
+        <summary>Кому принадлежит код после завершения?<span>↗</span></summary>
+        <p>
+          Порядок передачи кода и доступов оговаривается заранее и фиксируется в
+          договорённостях по проекту.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section class="sub-cta">
+    <div>
+      <p class="dv-label">Следующий шаг</p>
+      <h2>Обсудим вашу задачу</h2>
+      <p>
+        Расскажите, что нужно создать или улучшить. Для первого разговора
+        достаточно описания своими словами.
+      </p>
+    </div>
+    <a class="button primary" href="{% url 'main:contacts' %}"
+      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+    ></a>
+  </section>
+
+  <section class="related">
+    <h2>Другие направления</h2>
+    <div>
+      <a class="dv-link" href="{% url 'main:automation' %}"
+        >Автоматизация и интеграции
+        <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+      <a class="dv-link" href="{% url 'main:growth' %}"
+        >Продвижение и рост <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+      <a class="dv-link" href="{% url 'main:support' %}"
+        >Поддержка и инфраструктура
+        <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

@@ -1,0 +1,685 @@
+{% extends "main/base.html" %} {% load static %} {% block head %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="theme-color" content="#0b0c0d" />
+<meta
+  name="description"
+  content="Devory — разработка, автоматизация и интеграции для развития бизнеса."
+/>
+<title>Devory — цифровые решения для бизнеса</title>
+<link rel="preload" as="image" href="{% static 'main/assets/d.png' %}" />
+<link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main/motion.css' %}" />
+<link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
+<link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
+<link rel="canonical" href="https://devory.digital" />
+<script src="{% static 'main/site.js' %}" type="module" defer></script>
+<script src="{% static 'main/motion.js' %}" type="module" defer></script>
+<script src="{% static 'main/page.js' %}" type="module" defer></script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="DEVORY — цифровые решения для бизнеса" />
+<meta
+  property="og:description"
+  content="Разработка продуктов, автоматизация, интеграции и поддержка."
+/>
+<meta property="og:url" content="https://devory.digital" />
+<meta
+  property="og:image"
+  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Devory",
+    "url": "https://devory.digital"
+  }
+</script>
+{% endblock %} {% block body_class %}{% endblock %} {% block content %}
+<div class="hero" id="home">
+  <div class="art" aria-hidden="true">
+    <div class="scene">
+      <img
+        class="plate"
+        src="{% static 'main/assets/plate.png' %}"
+        width="1672"
+        height="941"
+        alt=""
+      />
+      <div class="ember"></div>
+      <div class="d-rig">
+        <div class="d-emerge">
+          <div class="d-float">
+            <img
+              class="monument"
+              src="{% static 'main/assets/d.png' %}"
+              width="1672"
+              height="941"
+              alt=""
+              fetchpriority="high"
+            />
+            <div class="metal-light"></div>
+          </div>
+        </div>
+      </div>
+      <div class="impact"></div>
+      <img
+        class="foreground"
+        src="{% static 'main/assets/rocks.png' %}"
+        width="1672"
+        height="941"
+        alt=""
+      />
+      <div class="sparks">
+        <i
+          style="
+            --sx: 57%;
+            --sy: 77%;
+            --duration: 3.3s;
+            --delay: 1.1s;
+            --drift: -15px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 70%;
+            --sy: 84%;
+            --duration: 3.9s;
+            --delay: 1.33s;
+            --drift: 17px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 83%;
+            --sy: 91%;
+            --duration: 4.5s;
+            --delay: 1.56s;
+            --drift: -19px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 96%;
+            --sy: 79%;
+            --duration: 5.1s;
+            --delay: 1.79s;
+            --drift: 21px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 69%;
+            --sy: 86%;
+            --duration: 3.3s;
+            --delay: 2.02s;
+            --drift: -23px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 82%;
+            --sy: 93%;
+            --duration: 3.9s;
+            --delay: 2.25s;
+            --drift: 25px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 95%;
+            --sy: 81%;
+            --duration: 4.5s;
+            --delay: 2.4800000000000004s;
+            --drift: -27px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 68%;
+            --sy: 88%;
+            --duration: 5.1s;
+            --delay: 2.71s;
+            --drift: 29px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 81%;
+            --sy: 95%;
+            --duration: 3.3s;
+            --delay: 2.9400000000000004s;
+            --drift: -31px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 94%;
+            --sy: 83%;
+            --duration: 3.9s;
+            --delay: 3.1700000000000004s;
+            --drift: 33px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 67%;
+            --sy: 90%;
+            --duration: 4.5s;
+            --delay: 3.4000000000000004s;
+            --drift: -35px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 80%;
+            --sy: 78%;
+            --duration: 5.1s;
+            --delay: 3.6300000000000003s;
+            --drift: 37px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 93%;
+            --sy: 85%;
+            --duration: 3.3s;
+            --delay: 3.8600000000000003s;
+            --drift: -39px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 66%;
+            --sy: 92%;
+            --duration: 3.9s;
+            --delay: 4.09s;
+            --drift: 41px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 79%;
+            --sy: 80%;
+            --duration: 4.5s;
+            --delay: 4.32s;
+            --drift: -43px;
+          "
+        ></i
+        ><i
+          style="
+            --sx: 92%;
+            --sy: 87%;
+            --duration: 5.1s;
+            --delay: 4.550000000000001s;
+            --drift: 45px;
+          "
+        ></i>
+      </div>
+    </div>
+  </div>
+  <main id="main" class="content">
+    <p class="eyebrow"><span></span>Digital engineering</p>
+    <h1>
+      Цифровые решения<br class="desktop-break" />
+      для развития бизнеса
+    </h1>
+    <p class="description">
+      Разработка, автоматизация и интеграции,<br class="desktop-break" />
+      которые превращают идеи в рабочие продукты<br class="desktop-break" />
+      и измеримый результат.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="{% url 'main:contacts' %}"
+        >Обсудить задачу <svg><use href="#arrow" /></svg></a
+      ><a class="button secondary" href="{% url 'main:solutions' %}"
+        ><svg class="play" viewBox="0 0 24 24">
+          <path d="m7 4 13 8-13 8V4Z" /></svg
+        >Смотреть решения</a
+      >
+    </div>
+    <ul class="services">
+      <li>
+        <svg><use href="#layers" /></svg
+        ><span>Разработка<small>веб и моб. продуктов</small></span>
+      </li>
+      <li>
+        <svg><use href="#bolt" /></svg
+        ><span>Автоматизация<small>и интеграции</small></span>
+      </li>
+      <li>
+        <svg><use href="#growth" /></svg
+        ><span>Продвижение<small>и рост</small></span>
+      </li>
+      <li>
+        <svg><use href="#cloud" /></svg
+        ><span>Поддержка<small>и инфраструктура</small></span>
+      </li>
+    </ul>
+  </main>
+  <button class="replay" aria-label="Повторить появление D">↻ Повторить</button>
+  <button class="motion-toggle" aria-pressed="false">
+    Остановить анимацию
+  </button>
+</div>
+<div class="page-body devory-v3">
+  <section
+    class="dv-section dv-services"
+    id="services"
+    aria-labelledby="services-title"
+  >
+    <div class="dv-intro">
+      <p class="dv-label">Возможности Devory</p>
+      <h2 id="services-title">
+        Собираем то, на чём<br />работает ваш бизнес<span>.</span>
+      </h2>
+      <p>
+        Продукт, процессы, привлечение клиентов и поддержка.<br />Можно начать с
+        одной задачи и развивать систему дальше.
+      </p>
+    </div>
+    <div class="engineering-desk">
+      <div
+        class="desk-switches"
+        role="tablist"
+        aria-label="Направления работы"
+        aria-orientation="vertical"
+      >
+        <button
+          role="tab"
+          id="service-tab-product"
+          aria-controls="service-panel"
+          aria-selected="true"
+          data-service="product"
+        >
+          <svg><use href="#layers" /></svg
+          ><span>Разработка<small>Превратить идею в продукт</small></span
+          ><b>↗</b>
+        </button>
+        <button
+          role="tab"
+          id="service-tab-connect"
+          aria-controls="service-panel"
+          aria-selected="false"
+          tabindex="-1"
+          data-service="connect"
+        >
+          <svg><use href="#bolt" /></svg
+          ><span>Автоматизация<small>Связать данные и процессы</small></span
+          ><b>↗</b>
+        </button>
+        <button
+          role="tab"
+          id="service-tab-grow"
+          aria-controls="service-panel"
+          aria-selected="false"
+          tabindex="-1"
+          data-service="grow"
+        >
+          <svg><use href="#growth" /></svg
+          ><span>Продвижение<small>Помочь клиенту найти вас</small></span
+          ><b>↗</b>
+        </button>
+        <button
+          role="tab"
+          id="service-tab-support"
+          aria-controls="service-panel"
+          aria-selected="false"
+          tabindex="-1"
+          data-service="support"
+        >
+          <svg><use href="#cloud" /></svg
+          ><span>Поддержка<small>Развивать после запуска</small></span
+          ><b>↗</b>
+        </button>
+      </div>
+      <div class="desk-view" data-active-service="product">
+        <div class="assembly" aria-hidden="true">
+          <div class="assembly-grid"></div>
+          <div class="assembly-stack">
+            <div class="metal-plane plane-top">
+              <div class="plane-face">
+                <i></i><span>ИНТЕРФЕЙС</span>
+                <div class="plane-window"><b></b><b></b><b></b></div>
+              </div>
+            </div>
+            <div class="metal-plane plane-middle">
+              <div class="plane-face">
+                <i></i><span>ПРОЦЕССЫ</span>
+                <div class="plane-circuit"><b></b><b></b><b></b></div>
+              </div>
+            </div>
+            <div class="metal-plane plane-bottom">
+              <div class="plane-face">
+                <i></i><span>ДАННЫЕ</span>
+                <div class="plane-data"><b></b><b></b><b></b></div>
+              </div>
+            </div>
+          </div>
+          <span class="assembly-caption"
+            >Отдельные части. Связанная система.</span
+          >
+        </div>
+        <div
+          class="desk-description"
+          id="service-panel"
+          role="tabpanel"
+          aria-labelledby="service-tab-product"
+          tabindex="0"
+        >
+          <p class="dv-label" id="service-category">Разработка продуктов</p>
+          <h3 id="service-name">
+            От первого сценария<br />до рабочего сервиса.
+          </h3>
+          <p id="service-description">
+            Проектируем и разрабатываем сайты, личные кабинеты, веб-сервисы и
+            мобильные приложения.
+          </p>
+          <div class="dv-pills" id="service-tags">
+            <span>Веб-продукты</span><span>Мобильные приложения</span
+            ><span>UX/UI</span>
+          </div>
+          <a
+            class="dv-link"
+            id="service-details"
+            href="{% url 'main:development' %}"
+            >Подробнее об услуге <svg><use href="#arrow" /></svg
+          ></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="dv-section home-demo-section"
+    id="solutions"
+    aria-labelledby="solutions-title"
+  >
+    <p class="dv-label">Решения / тестовые примеры</p>
+    <div class="home-demo-heading">
+      <h2 id="solutions-title">
+        Посмотрите, как может<br />быть устроен ваш продукт.
+      </h2>
+      <a class="dv-link" href="{% url 'main:solutions' %}"
+        >Все решения <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+    </div>
+    <p class="home-demo-note">
+      Демонстрационные сценарии. Компании и данные вымышлены.
+    </p>
+    <div class="demo-grid home-demo-grid">
+      <article class="demo-card" data-demo-type="product">
+        <a href="{% url 'main:solution-client-portal' %}"
+          ><div class="demo-preview product">
+            <span class="demo-badge">Тестовый пример</span>
+            <div class="preview-screen">
+              <div class="preview-top"><i></i><i></i><i></i></div>
+              <strong>Личный кабинет клиента</strong>
+              <div class="preview-row">
+                <span>Заявка #1042</span><b>Согласование</b>
+              </div>
+              <div class="preview-row">
+                <span>Заявка #1041</span><b>В работе</b>
+              </div>
+              <div class="preview-row">
+                <span>Заявка #1038</span><b>Завершена</b>
+              </div>
+            </div>
+          </div>
+          <div class="demo-copy">
+            <p class="dv-label">Веб-продукт</p>
+            <h2>Личный кабинет клиента</h2>
+            <p>
+              Тестовый пример кабинета для заявок, документов и истории
+              взаимодействия. Данные вымышлены и используются для демонстрации
+              интерфейса.
+            </p>
+            <span class="dv-link"
+              >Открыть пример <svg aria-hidden="true"><use href="#arrow" /></svg
+            ></span></div
+        ></a>
+      </article>
+      <article class="demo-card" data-demo-type="integration">
+        <a href="{% url 'main:solution-order-flow' %}"
+          ><div class="demo-preview integration">
+            <span class="demo-badge">Тестовый пример</span>
+            <div class="preview-screen">
+              <div class="preview-top"><i></i><i></i><i></i></div>
+              <strong>Заказ между сайтом, CRM и учётом</strong>
+              <div class="preview-row">
+                <span>Заказ DEMO-021</span><b>Передан в CRM</b>
+              </div>
+              <div class="preview-row">
+                <span>Заказ DEMO-020</span><b>Ожидает подтверждения</b>
+              </div>
+              <div class="preview-row">
+                <span>Заказ DEMO-019</span><b>Обмен завершён</b>
+              </div>
+            </div>
+          </div>
+          <div class="demo-copy">
+            <p class="dv-label">Автоматизация</p>
+            <h2>Заказ между сайтом, CRM и учётом</h2>
+            <p>
+              Тестовая схема обмена заказами и статусами между тремя системами.
+              Названия и записи демонстрационные.
+            </p>
+            <span class="dv-link"
+              >Открыть пример <svg aria-hidden="true"><use href="#arrow" /></svg
+            ></span></div
+        ></a>
+      </article>
+    </div>
+  </section>
+  <section class="dv-handover" id="about" aria-labelledby="about-title">
+    <div class="dv-section handover-inner">
+      <div class="handover-copy">
+        <p class="dv-label">Подход к работе</p>
+        <h2 id="about-title">
+          Продукт должен<br />остаться <em>в ваших руках.</em>
+        </h2>
+        <p>
+          Важен не только запуск. Важно понимать, как устроено решение, как его
+          поддерживать и что можно изменить дальше.
+        </p>
+        <div class="handover-note">
+          <span aria-hidden="true">↳</span>
+          <p>
+            Состав документации, доступы и порядок передачи согласуем в начале
+            проекта.
+          </p>
+        </div>
+      </div>
+      <div
+        class="handover-package"
+        aria-label="Предлагаемый состав передачи проекта"
+      >
+        <article class="document-sheet sheet-back">
+          <span>DEVORY / ПРОЕКТ</span>
+          <h3>Архитектура</h3>
+          <div class="sheet-diagram" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+          <small>Как связаны части системы</small>
+        </article>
+        <article class="document-sheet sheet-middle">
+          <span>DEVORY / ПЕРЕДАЧА</span>
+          <h3>Доступы и код</h3>
+          <ul>
+            <li>Исходные материалы</li>
+            <li>Репозиторий проекта</li>
+            <li>Доступы к сервисам</li>
+          </ul>
+        </article>
+        <article class="document-sheet sheet-front">
+          <span>DEVORY / РАЗВИТИЕ</span>
+          <h3>Следующий шаг</h3>
+          <p>Что поддерживать.<br />Что улучшать.<br />Что создавать дальше.</p>
+          <div class="sheet-stamp">
+            План развития <svg><use href="#arrow" /></svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section
+    class="dv-section dv-process"
+    id="process"
+    aria-labelledby="process-title"
+  >
+    <div class="process-header">
+      <p class="dv-label">Работа над проектом</p>
+      <h2 id="process-title">Вы видите,<br />как всё собирается.</h2>
+      <p>
+        Вместо ожидания финальной презентации —<br />обсуждение решений и
+        рабочих частей продукта.
+      </p>
+    </div>
+    <div class="build-track">
+      <article>
+        <div class="milestone"><i></i><span>Понимаем</span></div>
+        <h3>Что нужно бизнесу?</h3>
+        <p>Пользователи, процессы, ограничения и критерии готовности.</p>
+        <div class="build-piece piece-brief">
+          <span>Задача</span><b></b><b></b><b></b>
+        </div>
+        <small>План работ</small>
+      </article>
+      <article>
+        <div class="milestone"><i></i><span>Проектируем</span></div>
+        <h3>Как это будет работать?</h3>
+        <p>Сценарии, интерфейсы и взаимодействие частей системы.</p>
+        <div class="build-piece piece-prototype">
+          <i></i>
+          <div><b></b><b></b></div>
+        </div>
+        <small>Проект решения</small>
+      </article>
+      <article>
+        <div class="milestone"><i></i><span>Собираем</span></div>
+        <h3>Проверяем в действии.</h3>
+        <p>Разработка по этапам, демонстрации и тестирование.</p>
+        <div class="build-piece piece-working">
+          <span aria-hidden="true">✓</span><b>Рабочая версия</b>
+        </div>
+        <small>Продукт для проверки</small>
+      </article>
+      <article>
+        <div class="milestone"><i></i><span>Запускаем</span></div>
+        <h3>Передаём в работу.</h3>
+        <p>Развёртывание, перенос данных и план поддержки.</p>
+        <div class="build-piece piece-live">
+          <i></i><span>Система запущена</span><svg><use href="#arrow" /></svg>
+        </div>
+        <small>Запуск и развитие</small>
+      </article>
+    </div>
+  </section>
+  <section
+    class="dv-section dv-infrastructure"
+    id="technology"
+    aria-labelledby="technology-title"
+  >
+    <div class="infra-enclosure">
+      <div class="infra-copy">
+        <p class="dv-label">После запуска</p>
+        <h2 id="technology-title">
+          Система живёт.<br /><span>Мы остаёмся рядом.</span>
+        </h2>
+        <p>
+          Поддержка — отдельная часть проекта. Заранее определяем, что
+          наблюдаем, как обрабатываем обращения и как выпускаем изменения.
+        </p>
+        <a class="dv-link" href="{% url 'main:contacts' %}"
+          >Обсудить поддержку <svg><use href="#arrow" /></svg
+        ></a>
+      </div>
+      <div class="infra-rack">
+        <div class="rack-caption">
+          <span>Поддержка продукта</span><svg><use href="#cloud" /></svg>
+        </div>
+        <details open>
+          <summary><i></i>Наблюдать<span>+</span></summary>
+          <p>
+            Мониторинг, проверка доступности и разбор ошибок. Перечень проверок
+            согласуем для вашей системы.
+          </p>
+        </details>
+        <details>
+          <summary><i></i>Обновлять<span>+</span></summary>
+          <p>
+            Обновления компонентов и выпуск изменений с проверкой основных
+            сценариев.
+          </p>
+        </details>
+        <details>
+          <summary><i></i>Развивать<span>+</span></summary>
+          <p>Новые функции, интеграции и подготовка к изменению нагрузки.</p>
+        </details>
+        <div class="rack-bottom">
+          <span>Условия и время реакции — по договорённости</span><i></i><i></i
+          ><i></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dv-section dv-faq" aria-labelledby="faq-title">
+    <p class="dv-label">Перед разговором</p>
+    <h2 id="faq-title">Можно начать<br />с простого вопроса.</h2>
+    <div class="dv-faq-grid">
+      <details>
+        <summary>
+          Нет технического задания. С чего начать?<span>↗</span>
+        </summary>
+        <p>
+          Опишите задачу своими словами: что хотите запустить или какой процесс
+          улучшить. Это отправная точка для требований и плана.
+        </p>
+      </details>
+      <details>
+        <summary>Можно доработать существующий продукт?<span>↗</span></summary>
+        <p>
+          Сначала изучим систему и ограничения. После этого можно определить
+          подход к доработке и оценить объём изменений.
+        </p>
+      </details>
+      <details>
+        <summary>Когда будут понятны сроки и стоимость?<span>↗</span></summary>
+        <p>
+          После уточнения состава работ, интеграций и требований к результату.
+          Крупную задачу можно разделить на оцениваемые этапы.
+        </p>
+      </details>
+      <details>
+        <summary>Вы помогаете после запуска?<span>↗</span></summary>
+        <p>
+          Поддержку и развитие согласуем отдельным планом: состав задач, порядок
+          обращений и условия работы.
+        </p>
+      </details>
+    </div>
+  </section>
+  <section class="dv-contact" id="contact" aria-labelledby="contact-title">
+    <div class="dv-section contact-foundry">
+      <div class="foundry-light" aria-hidden="true"></div>
+      <p class="dv-label">Начнём с вашей задачи</p>
+      <h2 id="contact-title">Есть что<br /><em>создать?</em></h2>
+      <div class="foundry-action">
+        <p>
+          Новая идея, сложный процесс<br />или продукт, которому пора вырасти.
+        </p>
+        <a class="button primary" href="{% url 'main:contacts' %}"
+          >Обсудить проект <svg><use href="#arrow" /></svg
+        ></a>
+      </div>
+      <div class="foundry-baseline">
+        <span>DEVORY</span><span>Digital engineering</span>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

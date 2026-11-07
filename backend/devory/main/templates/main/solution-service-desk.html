@@ -1,0 +1,164 @@
+{% extends "main/base.html" %} {% load static %} {% block head %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="theme-color" content="#0b0c0d" />
+<title>Рабочее место команды поддержки — тестовый пример | DEVORY</title>
+<meta name="robots" content="noindex,follow" />
+<meta
+  name="description"
+  content="Тестовый пример внутренней системы обращений. Показывает очередь задач, приоритеты и распределение ответственности."
+/>
+<link rel="canonical" href="https://devory.digital" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Рабочее место команды поддержки — тестовый пример | DEVORY"
+/>
+<meta
+  property="og:description"
+  content="Тестовый пример внутренней системы обращений. Показывает очередь задач, приоритеты и распределение ответственности."
+/>
+<meta
+  property="og:url"
+  content="https://devory.digital/solution-service-desk/"
+/>
+<meta
+  property="og:image"
+  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
+<link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
+<link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<script src="{% static 'main/site.js' %}" type="module" defer></script>
+{% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
+<a class="skip" href="#main">К содержимому</a>
+<main id="main" class="submain">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
+    ><a href="{% url 'main:solutions' %}">Решения</a
+    ><span aria-hidden="true">/</span
+    ><span aria-current="page">Рабочее место команды поддержки</span>
+  </nav>
+  <div class="sub-intro">
+    <p class="dv-label">Внутренний сервис</p>
+    <h1>Рабочее место команды поддержки</h1>
+    <p class="sub-lead">
+      Тестовый пример внутренней системы обращений. Показывает очередь задач,
+      приоритеты и распределение ответственности.
+    </p>
+  </div>
+  <p class="demo-notice">
+    <strong>Тестовый пример / Демо-команда «Модуль».</strong> Все данные
+    вымышлены. Это не коммерческий кейс.
+  </p>
+  <section class="demo-large">
+    <div class="demo-large-top">
+      <span>Демо-команда «Модуль»</span><span class="demo-badge">Демо</span>
+    </div>
+    <h2>Рабочее место команды поддержки</h2>
+    <div class="decision-table">
+      <table>
+        <caption>
+          Демонстрационные записи
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Запись</th>
+            <th scope="col">Состояние</th>
+            <th scope="col">Данные</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Обращение DEMO-078</th>
+            <td>Высокий приоритет</td>
+            <td>Назначено</td>
+          </tr>
+          <tr>
+            <th scope="row">Обращение DEMO-077</th>
+            <td>Обычный приоритет</td>
+            <td>В работе</td>
+          </tr>
+          <tr>
+            <th scope="row">Обращение DEMO-076</th>
+            <td>Обычный приоритет</td>
+            <td>Закрыто</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="sub-section split-copy">
+    <div>
+      <p class="dv-label">Задача примера</p>
+      <h2>Что нужно организовать</h2>
+      <p>
+        Обращения приходят из разных источников. Команде нужен общий список с
+        приоритетом, ответственным и историей действий, чтобы следующий
+        сотрудник мог продолжить работу.
+      </p>
+    </div>
+    <div>
+      <p class="dv-label">Состав решения</p>
+      <h2>Основные функции</h2>
+      <ul class="plain-list">
+        <li>Единая очередь обращений</li>
+        <li>Приоритеты и ответственные</li>
+        <li>Комментарии и журнал действий</li>
+        <li>Фильтры по статусам и направлениям</li>
+      </ul>
+    </div>
+  </section>
+  <section class="sub-section">
+    <p class="dv-label">Сценарий</p>
+    <h2>Как проходит работа</h2>
+    <ol class="scenario-steps">
+      <li>Обращение попадает в очередь</li>
+      <li>Команда назначает ответственного</li>
+      <li>Сотрудник фиксирует действия</li>
+      <li>Решение сохраняется в истории</li>
+    </ol>
+  </section>
+  <section class="result-slab">
+    <div>
+      <p class="dv-label">Что показывает пример</p>
+      <h2>Проверяемый маршрут<br />пользователя и данных.</h2>
+    </div>
+    <p>
+      В примере обращения проходят видимый маршрут от регистрации до закрытия.
+      Показатели времени ответа и эффективности не являются результатами
+      реального проекта.
+    </p>
+  </section>
+  <section class="sub-cta">
+    <div>
+      <p class="dv-label">Следующий шаг</p>
+      <h2>Обсудим вашу задачу</h2>
+      <p>
+        Расскажите, что нужно создать или улучшить. Для первого разговора
+        достаточно описания своими словами.
+      </p>
+    </div>
+    <a class="button primary" href="{% url 'main:contacts' %}"
+      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+    ></a>
+  </section>
+  <section class="related">
+    <h2>Другие примеры</h2>
+    <div>
+      <a class="dv-link" href="{% url 'main:solution-client-portal' %}"
+        >Личный кабинет клиента
+        <svg aria-hidden="true"><use href="#arrow" /></svg></a
+      ><a class="dv-link" href="{% url 'main:solution-order-flow' %}"
+        >Заказ между сайтом, CRM и учётом
+        <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+    </div>
+  </section>
+</main>
+{% endblock %}

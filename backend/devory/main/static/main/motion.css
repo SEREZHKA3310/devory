@@ -1,0 +1,327 @@
+/* Independent planes: the background and the foreground never move. */
+.scene {
+  inset: auto 0 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672/941;
+  perspective: 1400px;
+  overflow: visible;
+}
+.scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+.plate,
+.foreground {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.plate {
+  z-index: 0;
+}
+.d-rig {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  transform-origin: 75% 62%;
+  transform: translate3d(var(--dx, 0px), var(--dy, 0px), 0) rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.d-emerge {
+  position: absolute;
+  inset: 0;
+  transform-origin: 75% 88%;
+  animation: devory-emerge 3.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.d-float {
+  position: absolute;
+  inset: 0;
+  transform-origin: 76% 66%;
+  animation: devory-float 7.5s ease-in-out 3.2s infinite;
+}
+.scene .monument {
+  animation: none;
+  filter: none;
+}
+.foreground {
+  z-index: 5;
+}
+.ember {
+  z-index: 1;
+  left: 57%;
+  top: 42%;
+  width: 40%;
+  height: 55%;
+  background: radial-gradient(ellipse, #ff3d222e, transparent 66%);
+  animation:
+    devory-ignition 3.2s ease-out both,
+    devory-glow 5s ease-in-out 3.2s infinite;
+  mix-blend-mode: screen;
+}
+.metal-light {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  mask: url('assets/d.png') center/100% 100% no-repeat;
+  -webkit-mask: url('assets/d.png') center/100% 100% no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+.metal-light::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    110deg,
+    transparent 43%,
+    #fff3 48%,
+    #fff9 50%,
+    #ffb59b55 52%,
+    transparent 57%
+  );
+  animation: devory-sweep 8s cubic-bezier(0.3, 0, 0.25, 1) 1s infinite;
+}
+.impact {
+  position: absolute;
+  inset: 40% 0 0 40%;
+  z-index: 4;
+  background: radial-gradient(ellipse at 65% 75%, #ff572247, transparent 58%);
+  mix-blend-mode: screen;
+  animation: devory-impact 3.2s ease-out both;
+  pointer-events: none;
+}
+.sparks {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+.sparks i {
+  position: absolute;
+  left: var(--sx);
+  top: var(--sy);
+  width: 2px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffad78;
+  box-shadow: 0 0 8px #ff4e2d;
+  opacity: 0;
+  animation: devory-spark var(--duration) ease-out var(--delay) infinite;
+  transform: translateZ(0);
+}
+.replay {
+  position: absolute;
+  bottom: 12px;
+  right: 6.45%;
+  z-index: 8;
+  border: 1px solid #ffffff25;
+  border-radius: 30px;
+  padding: 8px 15px;
+  background: #0b0c0d70;
+  color: #bcbcc1;
+  font-size: 12px;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.replay:hover {
+  color: white;
+  border-color: #ffffff65;
+}
+body.paused .scene *,
+body.motion-hidden .scene * {
+  animation-play-state: paused !important;
+}
+body.paused .d-rig {
+  transform: none !important;
+}
+body.paused .ember {
+  animation-play-state: paused !important;
+}
+@keyframes devory-emerge {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24%, 0) rotate(-9deg) rotateY(-18deg) scale(0.91);
+  }
+  12% {
+    opacity: 1;
+  }
+  63% {
+    transform: translate3d(0, -1.2%, 0) rotate(0.6deg) rotateY(2deg) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes devory-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  45% {
+    transform: translate3d(-2px, -8px, 0) rotate(-0.35deg);
+  }
+  75% {
+    transform: translate3d(2px, -3px, 0) rotate(0.15deg);
+  }
+}
+@keyframes devory-ignition {
+  0%,
+  10% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.18;
+  }
+  48% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.2;
+  }
+  78% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+@keyframes devory-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+@keyframes devory-impact {
+  0%,
+  38% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  49% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+@keyframes devory-sweep {
+  0%,
+  8% {
+    transform: translate3d(-60%, 0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  43% {
+    transform: translate3d(60%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(60%, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes devory-spark {
+  0%,
+  12% {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.5);
+  }
+  20% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift), -105px, 0) scale(0.2);
+  }
+}
+@media (max-width: 1250px) {
+  .scene::after {
+    display: none;
+  }
+  .art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #0b0c0d77, transparent 70%);
+    z-index: 7;
+  }
+}
+@media (max-width: 650px) {
+  .art {
+    height: 107vw;
+    max-height: 520px;
+  }
+  .scene {
+    width: 190%;
+    left: -90%;
+    height: auto;
+    aspect-ratio: 1672/941;
+  }
+  .art::after {
+    background: linear-gradient(180deg, #0b0c0d, transparent 60%);
+  }
+  .d-float {
+    animation-name: devory-float-mobile;
+  }
+  .sparks i:nth-child(n + 9) {
+    display: none;
+  }
+  .replay {
+    right: 24px;
+    bottom: 13px;
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  .motion-toggle {
+    font-size: 10px;
+    max-width: 44%;
+    text-align: left;
+  }
+}
+@keyframes devory-float-mobile {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene * {
+    animation: none !important;
+  }
+  .d-rig {
+    transform: none !important;
+    transition: none !important;
+  }
+  .impact,
+  .sparks,
+  .metal-light,
+  .replay {
+    display: none;
+  }
+  .ember {
+    opacity: 0.4;
+  }
+  .d-emerge {
+    opacity: 1;
+    transform: none;
+  }
+}

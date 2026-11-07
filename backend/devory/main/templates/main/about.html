@@ -1,0 +1,139 @@
+{% extends "main/base.html" %} {% load static %} {% block head %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="theme-color" content="#0b0c0d" />
+<title>О Devory и подходе к работе | DEVORY</title>
+<meta
+  name="description"
+  content="Devory объединяет разработку цифровых продуктов, автоматизацию и поддержку. Как строится работа, согласование результата и передача проекта."
+/>
+<link rel="canonical" href="https://devory.digital" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="О Devory и подходе к работе | DEVORY" />
+<meta
+  property="og:description"
+  content="Devory объединяет разработку цифровых продуктов, автоматизацию и поддержку. Как строится работа, согласование результата и передача проекта."
+/>
+<meta property="og:url" content="https://devory.digital/about/" />
+<meta
+  property="og:image"
+  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
+<link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
+<link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<script src="{% static 'main/site.js' %}" type="module" defer></script>
+{% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
+<a class="skip" href="#main">К содержимому</a>
+<main id="main" class="submain">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
+    ><span aria-current="page">О Devory</span>
+  </nav>
+  <div class="sub-intro">
+    <p class="dv-label">Devory / Digital engineering</p>
+    <h1>Соединяем продукт<br />с реальной работой бизнеса.</h1>
+    <p class="sub-lead">
+      Разработка, автоматизация, продвижение и поддержка связаны одной задачей:
+      дать людям рабочий инструмент и понятный способ его развивать.
+    </p>
+  </div>
+  <section class="sub-section about-statement">
+    <div>
+      <p class="dv-label">Что для нас важно</p>
+      <h2>За каждым экраном<br />есть человек и процесс.</h2>
+    </div>
+    <p>
+      Клиент оформляет заказ. Менеджер проверяет заявку. Сотрудник ищет документ
+      или передаёт работу дальше. Мы начинаем с этих действий и проектируем
+      систему вокруг них. Так можно обсуждать конкретный результат и проверять
+      его в работе.
+    </p>
+  </section>
+  <section class="sub-section">
+    <p class="dv-label">Формат сотрудничества</p>
+    <h2>Понятные решения<br />на каждом этапе.</h2>
+    <div class="content-grid">
+      <article>
+        <h3>Фиксируем задачу</h3>
+        <p>
+          Уточняем, кому нужен продукт, какие действия он должен поддерживать и
+          какие ограничения нужно учитывать.
+        </p>
+      </article>
+      <article>
+        <h3>Показываем ход работы</h3>
+        <p>
+          Разделяем проект на проверяемые этапы. Обсуждаем рабочие части
+          продукта и собираем обратную связь.
+        </p>
+      </article>
+      <article>
+        <h3>Согласуем изменения</h3>
+        <p>
+          Если меняется задача, сначала определяем влияние на состав работ,
+          сроки и стоимость.
+        </p>
+      </article>
+      <article>
+        <h3>Готовим передачу</h3>
+        <p>
+          Заранее обсуждаем код, материалы, доступы, инструкции и формат
+          дальнейшей поддержки.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="result-slab">
+    <div>
+      <p class="dv-label">Что остаётся у вас</p>
+      <h2>Материалы для работы<br />и развития продукта.</h2>
+    </div>
+    <ul>
+      <li>Исходный код и материалы в согласованном объёме</li>
+      <li>Доступы к сервисам и окружениям проекта</li>
+      <li>Инструкция по запуску и основным настройкам</li>
+      <li>Описание интеграций и известных ограничений</li>
+      <li>Очередь задач для следующих этапов</li>
+    </ul>
+  </section>
+  <section class="sub-section split-copy">
+    <div>
+      <p class="dv-label">До старта</p>
+      <h2>Можно прийти с идеей.</h2>
+      <p>
+        Готовое техническое задание не обязательно. Достаточно описать задачу и
+        текущий процесс. На первом этапе можно определить требования и состав
+        будущего продукта.
+      </p>
+    </div>
+    <div>
+      <p class="dv-label">После запуска</p>
+      <h2>Развитие планируем отдельно.</h2>
+      <p>
+        Поддержка, новые функции и интеграции требуют понятных правил.
+        Согласуем, какие задачи входят в сопровождение, как поступают обращения
+        и как определяется очередность работ.
+      </p>
+    </div>
+  </section>
+  <section class="sub-cta">
+    <div>
+      <p class="dv-label">Следующий шаг</p>
+      <h2>Обсудим вашу задачу</h2>
+      <p>
+        Расскажите, что нужно создать или улучшить. Для первого разговора
+        достаточно описания своими словами.
+      </p>
+    </div>
+    <a class="button primary" href="{% url 'main:contacts' %}"
+      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+    ></a>
+  </section>
+</main>
+{% endblock %}

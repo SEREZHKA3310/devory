@@ -1,0 +1,39 @@
+<header class="header">
+      <a class="brand" href="{% url 'main:index' %}" aria-label="Devory — главная"
+        ><svg viewBox="0 0 50 48" aria-hidden="true">
+          <path d="M4 4h20a20 20 0 0 1 0 40H4Z" fill="none" stroke="#f4513d" stroke-width="5" />
+          <path
+            d="M13 13h11a11 11 0 0 1 0 22H13V13Zm0 11h12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+          /></svg
+        ><span>Devory</span></a
+      >
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="{% url 'main:services' %}"
+          >Услуги <svg><use href="#chevron" /></svg
+        ></a>
+        <a href="{% url 'main:solutions' %}"
+          >Решения <svg><use href="#chevron" /></svg
+        ></a>
+        <a href="{% url 'main:technology' %}">Технологии</a><a href="{% url 'main:about' %}">О нас</a
+        ><a href="{% url 'main:contacts' %}">Контакты</a>
+      </nav>
+      <a class="button primary header-cta" href="{% url 'main:contacts' %}"
+        >Обсудить проект <svg><use href="#arrow" /></svg
+      ></a>
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Открыть меню"
+      >
+        <span></span><span></span>
+      </button>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
+        <a href="{% url 'main:services' %}">Услуги</a><a href="{% url 'main:solutions' %}">Решения</a
+        ><a href="{% url 'main:technology' %}">Технологии</a><a href="{% url 'main:about' %}">О нас</a
+        ><a href="{% url 'main:contacts' %}">Контакты</a>
+      </nav>
+    </header>

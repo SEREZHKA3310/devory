@@ -1,0 +1,111 @@
+{% extends "main/base.html" %} {% load static %} {% block head %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="theme-color" content="#0b0c0d" />
+<title>Услуги: разработка, автоматизация и поддержка | DEVORY</title>
+<meta
+  name="description"
+  content="Услуги Devory для цифровых продуктов: разработка сайтов и приложений, интеграции, аналитика и поддержка."
+/>
+<link rel="canonical" href="https://devory.digital" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Услуги: разработка, автоматизация и поддержка | DEVORY"
+/>
+<meta
+  property="og:description"
+  content="Услуги Devory для цифровых продуктов: разработка сайтов и приложений, интеграции, аналитика и поддержка."
+/>
+<meta property="og:url" content="https://devory.digital/services/" />
+<meta
+  property="og:image"
+  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
+<link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
+<link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<script src="{% static 'main/site.js' %}" type="module" defer></script>
+{% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
+<a class="skip" href="#main">К содержимому</a>
+<main id="main" class="submain">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
+    ><span aria-current="page">Услуги</span>
+  </nav>
+  <div class="sub-intro">
+    <p class="dv-label">Возможности Devory</p>
+    <h1>Рабочие инструменты<br />для задач бизнеса.</h1>
+    <p class="sub-lead">
+      Помогаем запустить продукт, связать сервисы и организовать работу после
+      запуска. Выберите направление или начните с описания своей ситуации.
+    </p>
+  </div>
+  <div class="service-catalog">
+    <a href="{% url 'main:development' %}" class="catalog-item"
+      ><svg class="catalog-symbol"><use href="#layers" /></svg>
+      <div>
+        <p class="dv-label">Продуктовая разработка</p>
+        <h2>Разработка продуктов</h2>
+        <p>Сайты, веб-сервисы и мобильные приложения.</p>
+        <span>Состав работ и результат</span>
+      </div>
+      <svg aria-hidden="true"><use href="#arrow" /></svg></a
+    ><a href="{% url 'main:automation' %}" class="catalog-item"
+      ><svg class="catalog-symbol"><use href="#bolt" /></svg>
+      <div>
+        <p class="dv-label">Связанные бизнес-процессы</p>
+        <h2>Автоматизация и интеграции</h2>
+        <p>Данные и действия между вашими сервисами.</p>
+        <span>Состав работ и результат</span>
+      </div>
+      <svg aria-hidden="true"><use href="#arrow" /></svg></a
+    ><a href="{% url 'main:growth' %}" class="catalog-item"
+      ><svg class="catalog-symbol"><use href="#growth" /></svg>
+      <div>
+        <p class="dv-label">Развитие цифрового продукта</p>
+        <h2>Продвижение и рост</h2>
+        <p>Посадочные страницы, аналитика и путь к заявке.</p>
+        <span>Состав работ и результат</span>
+      </div>
+      <svg aria-hidden="true"><use href="#arrow" /></svg></a
+    ><a href="{% url 'main:support' %}" class="catalog-item"
+      ><svg class="catalog-symbol"><use href="#cloud" /></svg>
+      <div>
+        <p class="dv-label">Работа после запуска</p>
+        <h2>Поддержка и инфраструктура</h2>
+        <p>Работоспособность, обновления и развитие.</p>
+        <span>Состав работ и результат</span>
+      </div>
+      <svg aria-hidden="true"><use href="#arrow" /></svg
+    ></a>
+  </div>
+  <section class="sub-section compact">
+    <h2>Можно начать с одной задачи.</h2>
+    <p class="wide-copy">
+      Необязательно менять всю систему сразу. Можно выпустить первую версию
+      личного кабинета, подключить один обмен данными или разобрать состояние
+      работающего сервиса. Границы первого этапа определяем так, чтобы его
+      результат можно было проверить отдельно.
+    </p>
+  </section>
+  <section class="sub-cta">
+    <div>
+      <p class="dv-label">Следующий шаг</p>
+      <h2>Обсудим вашу задачу</h2>
+      <p>
+        Расскажите, что нужно создать или улучшить. Для первого разговора
+        достаточно описания своими словами.
+      </p>
+    </div>
+    <a class="button primary" href="{% url 'main:contacts' %}"
+      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+    ></a>
+  </section>
+</main>
+{% endblock %}

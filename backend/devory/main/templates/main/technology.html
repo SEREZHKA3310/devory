@@ -1,0 +1,191 @@
+{% extends "main/base.html" %} {% load static %} {% block head %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="theme-color" content="#0b0c0d" />
+<title>Технологии и архитектура цифрового продукта | DEVORY</title>
+<meta
+  name="description"
+  content="Как Devory проектирует интерфейсы, бизнес-логику, интеграции и инфраструктуру. Критерии выбора стека и подготовки к запуску."
+/>
+<link rel="canonical" href="https://devory.digital" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Технологии и архитектура цифрового продукта | DEVORY"
+/>
+<meta
+  property="og:description"
+  content="Как Devory проектирует интерфейсы, бизнес-логику, интеграции и инфраструктуру. Критерии выбора стека и подготовки к запуску."
+/>
+<meta property="og:url" content="https://devory.digital/technology/" />
+<meta
+  property="og:image"
+  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
+<link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
+<link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<script src="{% static 'main/site.js' %}" type="module" defer></script>
+{% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
+<a class="skip" href="#main">К содержимому</a>
+<main id="main" class="submain">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
+    ><span aria-current="page">Технологии</span>
+  </nav>
+  <div class="sub-intro">
+    <p class="dv-label">Архитектура продукта</p>
+    <h1>Технологии выбираем<br />под задачу и условия работы.</h1>
+    <p class="sub-lead">
+      Учитываем сценарии пользователей, данные, существующие системы и ресурсы
+      на поддержку. Выбор инструментов фиксируем после разбора требований.
+    </p>
+  </div>
+  <section class="architecture-map">
+    <article>
+      <span>Пользовательский слой</span>
+      <h2>Интерфейсы</h2>
+      <p>
+        Сценарии, доступность, мобильные состояния и обратная связь на действия
+        пользователя.
+      </p>
+    </article>
+    <i aria-hidden="true"></i>
+    <article>
+      <span>Прикладной слой</span>
+      <h2>Логика и интеграции</h2>
+      <p>
+        Правила процесса, права доступа, взаимодействие сервисов и обработка
+        ошибок.
+      </p>
+    </article>
+    <i aria-hidden="true"></i>
+    <article>
+      <span>Основа продукта</span>
+      <h2>Данные и инфраструктура</h2>
+      <p>
+        Хранение, окружения, резервное копирование, наблюдение за состоянием и
+        выпуск изменений.
+      </p>
+    </article>
+  </section>
+  <section class="sub-section">
+    <p class="dv-label">Выбор стека</p>
+    <h2>Решение начинается с ограничений.</h2>
+    <div class="decision-table">
+      <table>
+        <caption>
+          Критерии выбора технологического решения
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Что выясняем</th>
+            <th scope="col">На что это влияет</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Кто и где работает с продуктом</th>
+            <td>
+              Тип интерфейса, устройства, доступность и требования к скорости
+              загрузки.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Какие данные обрабатываются</th>
+            <td>
+              Структура хранения, разграничение доступа, размещение и резервное
+              копирование.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">С какими системами нужен обмен</th>
+            <td>
+              API, формат данных, способ синхронизации и обработка повторных
+              событий.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Как продукт будет развиваться</th>
+            <td>
+              Границы компонентов, документация, выпуск изменений и
+              наблюдаемость.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Кто будет поддерживать систему</th>
+            <td>
+              Требования к стеку, доступность специалистов и сложность
+              сопровождения.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="sub-section">
+    <p class="dv-label">Рабочая практика</p>
+    <h2>Предусматриваем поведение<br />за пределами обычного сценария.</h2>
+    <div class="content-grid">
+      <article>
+        <h3>Пользователь ошибся</h3>
+        <p>
+          Интерфейс объясняет, какое поле исправить, и по возможности сохраняет
+          введённые данные.
+        </p>
+      </article>
+      <article>
+        <h3>Внешний сервис недоступен</h3>
+        <p>
+          У интеграции есть определённое поведение при таймауте, повторе запроса
+          и неполном ответе.
+        </p>
+      </article>
+      <article>
+        <h3>Изменение нужно отменить</h3>
+        <p>
+          План выпуска учитывает проверку результата, резервную копию и
+          возможность возврата.
+        </p>
+      </article>
+      <article>
+        <h3>К проекту подключается другой специалист</h3>
+        <p>
+          Структура репозитория и документация помогают разобраться в
+          окружениях, настройках и основных сценариях.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="result-slab">
+    <div>
+      <p class="dv-label">Перед запуском</p>
+      <h2>Проверяем систему целиком.</h2>
+    </div>
+    <ul>
+      <li>Основные сценарии и пользовательские роли</li>
+      <li>Пустые состояния, ошибки и недоступность сервисов</li>
+      <li>Мобильные экраны и управление с клавиатуры</li>
+      <li>Настройки окружения, доступы и порядок развёртывания</li>
+    </ul>
+  </section>
+  <section class="sub-cta">
+    <div>
+      <p class="dv-label">Следующий шаг</p>
+      <h2>Разберём вашу систему</h2>
+      <p>
+        Опишите текущий продукт, интеграции и ограничения. Это поможет
+        определить, что стоит сохранить и что нужно изменить.
+      </p>
+    </div>
+    <a class="button primary" href="{% url 'main:contacts' %}"
+      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+    ></a>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}subpage{% endblock %}" id="top">
+  <a class="skip" href="#main">К содержимому</a>
+  {% include "main/includes/symbols.html" %}
+  {% include "main/includes/header.html" %}
+  {% block content %}{% endblock %}
+  {% include "main/includes/footer.html" %}
+</body>
+</html>

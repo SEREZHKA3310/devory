@@ -1,0 +1,217 @@
+{% extends "main/base.html" %} {% load static %} {% block head %}
+<meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+/>
+<meta name="theme-color" content="#0b0c0d" />
+<title>Продвижение и рост | DEVORY</title>
+<meta
+  name="description"
+  content="Готовим страницы для привлечения клиентов, настраиваем измерение действий и улучшаем сценарии обращения. Работаем с содержанием, интерфейсом и техническими препятствиями на пути пользователя."
+/>
+<link rel="canonical" href="https://devory.digital" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Продвижение и рост | DEVORY" />
+<meta
+  property="og:description"
+  content="Готовим страницы для привлечения клиентов, настраиваем измерение действий и улучшаем сценарии обращения. Работаем с содержанием, интерфейсом и техническими препятствиями на пути пользователя."
+/>
+<meta property="og:url" content="https://devory.digital/growth/" />
+<meta
+  property="og:image"
+  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
+<link rel="stylesheet" href="{% static 'main/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
+<link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<script src="{% static 'main/site.js' %}" defer></script>
+{% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
+<a class="skip" href="#main">К содержимому</a>
+<main id="main" class="submain">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
+    ><a href="{% url 'main:services' %}">Услуги</a
+    ><span aria-hidden="true">/</span
+    ><span aria-current="page">Продвижение и рост</span>
+  </nav>
+  <div class="service-heading">
+    <div class="sub-intro">
+      <p class="dv-label">Развитие цифрового продукта</p>
+      <h1>Путь от интереса к обращению должен быть понятным.</h1>
+      <p class="sub-lead">
+        Готовим страницы для привлечения клиентов, настраиваем измерение
+        действий и улучшаем сценарии обращения. Работаем с содержанием,
+        интерфейсом и техническими препятствиями на пути пользователя.
+      </p>
+      <a class="button primary" href="{% url 'main:contacts' %}"
+        >Подготовить задачу <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+    </div>
+    <div class="service-object" aria-hidden="true">
+      <div class="service-object-layer"></div>
+      <div class="service-object-layer"></div>
+      <div class="service-object-layer">
+        <svg><use href="#growth" /></svg>
+      </div>
+    </div>
+  </div>
+  <section class="sub-section">
+    <p class="dv-label">Когда это нужно</p>
+    <h2>Узнаёте свою ситуацию?</h2>
+    <div class="content-grid">
+      <article>
+        <h3>Трафик есть, обращения теряются</h3>
+        <p>
+          Нужно разобраться, где посетитель прекращает действие: на странице, в
+          форме или после отправки.
+        </p>
+      </article>
+      <article>
+        <h3>Запускаете новое направление</h3>
+        <p>
+          Нужна отдельная страница с предложением, ответами на вопросы и
+          понятным следующим шагом.
+        </p>
+      </article>
+      <article>
+        <h3>Данных для решений недостаточно</h3>
+        <p>
+          Не определены целевые действия или события в аналитике не связаны с
+          реальными обращениями.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="sub-section">
+    <p class="dv-label">Внутри проекта</p>
+    <h2>Что входит в работу</h2>
+    <div class="scope-list">
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Разбор предложения</h3>
+        <p>
+          Уточняем аудиторию, задачу клиента и содержание страницы. Отделяем
+          подтверждённые факты от предположений.
+        </p>
+      </article>
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Страницы и сценарии</h3>
+        <p>
+          Проектируем посадочные страницы, формы и путь к обращению. Проверяем
+          мобильную версию и доступность основных действий.
+        </p>
+      </article>
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Измерение действий</h3>
+        <p>
+          Определяем события и условия успешной конверсии. Настраиваем аналитику
+          с учётом выбранных сервисов и требований проекта.
+        </p>
+      </article>
+      <article>
+        <span class="scope-marker" aria-hidden="true"></span>
+        <h3>Улучшения по данным</h3>
+        <p>
+          Формулируем гипотезы, вносим изменения и сравниваем результаты по
+          согласованным показателям.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="result-slab">
+    <div>
+      <p class="dv-label">На выходе</p>
+      <h2>Результат, который<br />можно передать в работу.</h2>
+    </div>
+    <ul>
+      <li>Страница или набор улучшений для выбранного сценария</li>
+      <li>Карта целевых действий и событий</li>
+      <li>Проверка передачи данных в согласованные системы</li>
+      <li>Список следующих гипотез с критериями оценки</li>
+    </ul>
+  </section>
+  <section class="sub-section split-copy">
+    <div>
+      <p class="dv-label">Приёмка</p>
+      <h2>Как проверяем готовность</h2>
+      <p>
+        Результат этапа проверяем по конкретным действиям: форма отправляется,
+        событие фиксируется при успешном действии, пользователь получает
+        понятное подтверждение. Изменение конверсии оцениваем только после
+        накопления сопоставимых данных.
+      </p>
+    </div>
+    <div>
+      <p class="dv-label">Оценка</p>
+      <h2>Что влияет на объём</h2>
+      <p>
+        Количество обращений зависит от предложения, источников трафика, спроса
+        и обработки заявок. Рост выручки или конкретное число лидов нельзя
+        обещать на основании изменения страницы.
+      </p>
+    </div>
+  </section>
+  <section class="sub-section">
+    <p class="dv-label">До начала работ</p>
+    <h2>Частые вопросы</h2>
+    <div class="dv-faq-grid">
+      <details>
+        <summary>
+          Можно улучшить страницу без полного редизайна?<span>↗</span>
+        </summary>
+        <p>
+          Да. Если проблема локальная, достаточно изменить содержание, форму или
+          отдельный шаг сценария.
+        </p>
+      </details>
+      <details>
+        <summary>С чего начинается аналитика?<span>↗</span></summary>
+        <p>
+          С определения целевого действия и его успешного завершения. Затем
+          выбираем события и проверяем, что они не срабатывают ошибочно.
+        </p>
+      </details>
+      <details>
+        <summary>Когда можно судить о результате?<span>↗</span></summary>
+        <p>
+          После накопления данных, достаточных для выбранного метода сравнения.
+          Период зависит от трафика, сезонности и частоты целевых действий.
+        </p>
+      </details>
+    </div>
+  </section>
+  <section class="sub-cta">
+    <div>
+      <p class="dv-label">Следующий шаг</p>
+      <h2>Обсудим вашу задачу</h2>
+      <p>
+        Расскажите, что нужно создать или улучшить. Для первого разговора
+        достаточно описания своими словами.
+      </p>
+    </div>
+    <a class="button primary" href="{% url 'main:contacts' %}"
+      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
+    ></a>
+  </section>
+  <section class="related">
+    <h2>Другие направления</h2>
+    <div>
+      <a class="dv-link" href="{% url 'main:development' %}"
+        >Разработка продуктов
+        <svg aria-hidden="true"><use href="#arrow" /></svg></a
+      ><a class="dv-link" href="{% url 'main:automation' %}"
+        >Автоматизация и интеграции
+        <svg aria-hidden="true"><use href="#arrow" /></svg></a
+      ><a class="dv-link" href="{% url 'main:support' %}"
+        >Поддержка и инфраструктура
+        <svg aria-hidden="true"><use href="#arrow" /></svg
+      ></a>
+    </div>
+  </section>
+</main>
+{% endblock %}
