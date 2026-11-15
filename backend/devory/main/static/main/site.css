@@ -62,10 +62,7 @@
 }
 .sub-section h2,
 .result-slab h2,
-.sub-cta h2,
-.related h2,
-.contact-guide h2,
-.brief-form h2 {
+.related h2{
   font-size: clamp(30px, 3vw, 45px);
   font-weight: 500;
   line-height: 1.14;
@@ -73,8 +70,7 @@
   margin: 0 0 32px;
 }
 .sub-section p,
-.result-slab p,
-.sub-cta p {
+.result-slab p{
   color: #969da9;
   font-size: 16px;
   line-height: 1.8;
@@ -302,32 +298,6 @@
 .split-copy p {
   font-size: 15px;
 }
-.sub-cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 45px;
-  border-radius: 20px;
-  background:
-    radial-gradient(ellipse at 85% 110%, #f44f3920, transparent 70%), #151719;
-  border: 1px solid #3b3431;
-  padding: 50px;
-  margin: 30px 0 65px;
-}
-.sub-cta h2 {
-  margin-bottom: 20px;
-  font-size: 40px;
-}
-.sub-cta p:not(.dv-label) {
-  max-width: 650px;
-  margin: 0;
-  font-size: 15px;
-}
-.sub-cta .button {
-  font-size: 17px;
-  padding: 16px 28px;
-  min-height: 56px;
-}
 .related {
   padding: 0 0 65px;
 }
@@ -346,16 +316,6 @@
 }
 .subpage .dv-faq-grid {
   margin-top: 35px;
-}
-.about-statement {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-.about-statement > p {
-  font-size: 19px;
-  line-height: 1.85;
 }
 .architecture-map {
   display: flex;
@@ -661,144 +621,6 @@
   font: 11px monospace;
   margin-bottom: 25px;
 }
-.contact-workspace {
-  display: grid;
-  grid-template-columns: 1.4fr 0.8fr;
-  gap: 65px;
-  margin: 20px 0 30px;
-}
-.brief-form {
-  background: linear-gradient(135deg, #20262e, #14181e);
-  border: 1px solid #3c4757;
-  border-radius: 18px;
-  padding: 40px;
-}
-.brief-form h2 {
-  font-size: 30px;
-}
-.form-notice {
-  color: #b79e8a;
-  font-size: 12px;
-  line-height: 1.75;
-  border: 1px solid #70533d;
-  background: #2b241d;
-  padding: 15px 18px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-}
-.form-notice strong {
-  font-weight: 500;
-  color: #dfb290;
-}
-.brief-form label {
-  display: block;
-  font-size: 12px;
-  color: #bcc4d1;
-  line-height: 1.5;
-  margin-bottom: 23px;
-}
-.brief-form label > span {
-  font-size: 10px;
-  color: #727f92;
-}
-.brief-form input,
-.brief-form select,
-.brief-form textarea {
-  display: block;
-  width: 100%;
-  font: inherit;
-  font-size: 14px;
-  color: #e3e9f2;
-  border: 1px solid #49566b;
-  border-radius: 8px;
-  background: #0f141b;
-  padding: 13px 15px;
-  margin: 10px 0 0;
-  min-height: 48px;
-  max-width: 100%;
-}
-.brief-form input::placeholder,
-.brief-form textarea::placeholder {
-  color: #68778e;
-}
-.brief-form textarea {
-  line-height: 1.7;
-  resize: vertical;
-}
-.brief-form input:focus,
-.brief-form select:focus,
-.brief-form textarea:focus {
-  outline: 2px solid #c98362;
-  outline-offset: 3px;
-}
-.form-two {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-.brief-form .button {
-  font-size: 16px;
-  min-height: 54px;
-  padding: 15px 28px;
-}
-.brief-status {
-  font-size: 12px;
-  line-height: 1.7;
-  color: #d9a586;
-  min-height: 21px;
-}
-.form-privacy {
-  color: #748198;
-  font-size: 10px;
-  line-height: 1.7;
-  margin: 18px 0 0;
-}
-.contact-guide {
-  padding-top: 20px;
-}
-.contact-guide h2 {
-  font-size: 35px;
-}
-.contact-guide ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.contact-guide li {
-  padding: 23px 0;
-  border-bottom: 1px solid #333c48;
-}
-.contact-guide li strong {
-  font-weight: 400;
-  font-size: 16px;
-  display: block;
-  color: #d2d8e2;
-  margin-bottom: 10px;
-}
-.contact-guide li span {
-  display: block;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #8290a4;
-}
-.contact-availability {
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  margin-top: 30px;
-}
-.contact-availability svg {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  color: #af8971;
-}
-.contact-availability p {
-  font-size: 12px;
-  line-height: 1.7;
-  margin: 0;
-  color: #7c8798;
-}
 .release-footer {
   max-width: 1460px;
   margin: auto;
@@ -806,7 +628,7 @@
 }
 .release-footer-top {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr 0.7fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr 0.7fr;
   gap: 45px;
   padding-bottom: 45px;
 }
@@ -832,16 +654,6 @@
 .release-footer-top .dv-footer-logo span {
   font-size: 8px;
   color: #69778e;
-}
-.footer-offline p {
-  font-size: 12px;
-  color: #8b99ae;
-  line-height: 1.8;
-  margin: 0 0 24px;
-}
-.footer-offline .dv-link {
-  font-size: 11px;
-  gap: 12px;
 }
 .release-footer-bottom {
   border-top: 1px solid #303846;
@@ -915,27 +727,6 @@
   }
   .architecture-map > i {
     width: 10px;
-  }
-  .contact-workspace {
-    gap: 35px;
-    grid-template-columns: 1.3fr 0.8fr;
-  }
-  .brief-form {
-    padding: 28px;
-  }
-  .contact-guide h2 {
-    font-size: 29px;
-  }
-  .sub-cta {
-    padding: 35px;
-    gap: 30px;
-  }
-  .sub-cta h2 {
-    font-size: 33px;
-  }
-  .sub-cta .button {
-    font-size: 15px;
-    padding: 15px 24px;
   }
   .release-footer-top {
     grid-template-columns: 1fr 1fr;
@@ -1084,24 +875,6 @@
   .split-copy p {
     font-size: 14px;
   }
-  .sub-cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 25px;
-    padding: 30px 24px;
-    margin: 15px 0 45px;
-    border-radius: 14px;
-  }
-  .sub-cta h2 {
-    font-size: 31px;
-  }
-  .sub-cta p:not(.dv-label) {
-    font-size: 14px;
-  }
-  .sub-cta .button {
-    font-size: 16px;
-    width: 100%;
-  }
   .related {
     padding-bottom: 40px;
   }
@@ -1115,12 +888,6 @@
   .related .dv-link {
     justify-content: space-between;
     max-width: 330px;
-  }
-  .about-statement {
-    display: block;
-  }
-  .about-statement > p {
-    font-size: 16px;
   }
   .architecture-map {
     display: block;
@@ -1213,54 +980,6 @@
   .scenario-steps li::before {
     margin-bottom: 15px;
   }
-  .contact-workspace {
-    display: block;
-    margin-top: 0;
-  }
-  .brief-form {
-    padding: 26px 19px;
-    border-radius: 13px;
-  }
-  .brief-form h2 {
-    font-size: 28px;
-  }
-  .form-notice {
-    padding: 13px 15px;
-    font-size: 11px;
-  }
-  .form-two {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .brief-form label {
-    font-size: 11px;
-    margin-bottom: 21px;
-  }
-  .brief-form input,
-  .brief-form select,
-  .brief-form textarea {
-    font-size: 16px;
-    padding: 12px;
-    min-height: 48px;
-  }
-  .brief-form .button {
-    width: 100%;
-    font-size: 15px;
-    padding: 14px 20px;
-  }
-  .contact-guide {
-    margin-top: 40px;
-    padding-top: 0;
-  }
-  .contact-guide h2 {
-    font-size: 32px;
-  }
-  .contact-guide li {
-    padding: 20px 0;
-  }
-  .contact-guide li span {
-    font-size: 13px;
-  }
   .release-footer {
     padding: 40px 22px 25px;
   }
@@ -1269,8 +988,7 @@
     gap: 35px 25px;
     padding-bottom: 30px;
   }
-  .release-footer-top > .dv-footer-logo,
-  .release-footer-top > .footer-offline {
+  .release-footer-top > .dv-footer-logo {
     grid-column: 1/-1;
   }
   .release-footer-top h2 {
@@ -1298,3 +1016,25 @@
     transform: perspective(700px) rotateY(-6deg) rotateX(6deg) rotate(-3deg);
   }
 }
+
+
+/* Readable microcopy and footer metadata */
+.subpage .dv-label { font-size: 12px; }
+.catalog-item .dv-label { font-size: 11px; }
+.catalog-item span { font-size: 12px; color: #c2b8b2; }
+.breadcrumbs { color: #9a9faa; }
+.release-footer-top .dv-footer-logo span { font-size: 11px; color: #9ba8bd; }
+.release-footer-bottom { font-size: 11px; color: #9ba8bd; }
+@media (max-width: 650px) {
+  .breadcrumbs { font-size: 11px; }
+  .catalog-item span { font-size: 11px; }
+  .release-footer-bottom { font-size: 10px; }
+  .release-footer-top h2 { font-size: 11px !important; }
+}
+.catalog-item .dv-label { font-size: 11px; }
+.architecture-map article > span { font-size: 11px; color: #d2a58c; }
+.decision-table thead th { font-size: 12px; }
+.filter-status { font-size: 12px; color: #a3adbc; }
+.demo-preview .demo-badge { font-size: 10px; }
+.demo-large-top { font-size: 11px; }
+.release-footer-top h2 { font-size: 12px !important; }

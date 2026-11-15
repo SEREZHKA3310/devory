@@ -11,7 +11,6 @@
   name="description"
   content="Тестовые примеры решений Devory: личный кабинет, интеграция заказов и рабочее место поддержки. Все данные демонстрационные."
 />
-<link rel="canonical" href="https://devory.digital" />
 <meta property="og:type" content="website" />
 <meta
   property="og:title"
@@ -33,7 +32,6 @@
 <link rel="stylesheet" href="{% static 'main/site.css' %}" />
 <script src="{% static 'main/site.js' %}" defer></script>
 {% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
-<a class="skip" href="#main">К содержимому</a>
 <main id="main" class="submain">
   <nav class="breadcrumbs" aria-label="Хлебные крошки">
     <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
@@ -155,18 +153,5 @@
       ></a>
     </article>
   </div>
-  <section class="sub-cta">
-    <div>
-      <p class="dv-label">Следующий шаг</p>
-      <h2>Есть похожая задача?</h2>
-      <p>
-        Расскажите о своём процессе. Состав решения определим по вашим
-        требованиям.
-      </p>
-    </div>
-    <a class="button primary" href="{% url 'main:contacts' %}"
-      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
-    ></a>
-  </section>
 </main>
 {% endblock %}

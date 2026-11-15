@@ -11,18 +11,18 @@
         ><span>Devory</span></a
       >
       <nav class="desktop-nav" aria-label="Основная навигация">
-        <a href="{% url 'main:services' %}"
+        <a
+          {% if request.resolver_match.url_name == 'services' or request.resolver_match.url_name == 'development' or request.resolver_match.url_name == 'automation' or request.resolver_match.url_name == 'growth' or request.resolver_match.url_name == 'support' %}aria-current="page"{% endif %}
+          href="{% url 'main:services' %}"
           >Услуги <svg><use href="#chevron" /></svg
         ></a>
-        <a href="{% url 'main:solutions' %}"
+        <a
+          {% if request.resolver_match.url_name == 'solutions' or request.resolver_match.url_name == 'solution-client-portal' or request.resolver_match.url_name == 'solution-order-flow' or request.resolver_match.url_name == 'solution-service-desk' %}aria-current="page"{% endif %}
+          href="{% url 'main:solutions' %}"
           >Решения <svg><use href="#chevron" /></svg
         ></a>
-        <a href="{% url 'main:technology' %}">Технологии</a><a href="{% url 'main:about' %}">О нас</a
-        ><a href="{% url 'main:contacts' %}">Контакты</a>
+        <a {% if request.resolver_match.url_name == 'technology' %}aria-current="page"{% endif %} href="{% url 'main:technology' %}">Технологии</a>
       </nav>
-      <a class="button primary header-cta" href="{% url 'main:contacts' %}"
-        >Обсудить проект <svg><use href="#arrow" /></svg
-      ></a>
       <button
         class="menu-toggle"
         aria-expanded="false"
@@ -32,8 +32,8 @@
         <span></span><span></span>
       </button>
       <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
-        <a href="{% url 'main:services' %}">Услуги</a><a href="{% url 'main:solutions' %}">Решения</a
-        ><a href="{% url 'main:technology' %}">Технологии</a><a href="{% url 'main:about' %}">О нас</a
-        ><a href="{% url 'main:contacts' %}">Контакты</a>
+        <a {% if request.resolver_match.url_name == 'services' or request.resolver_match.url_name == 'development' or request.resolver_match.url_name == 'automation' or request.resolver_match.url_name == 'growth' or request.resolver_match.url_name == 'support' %}aria-current="page"{% endif %} href="{% url 'main:services' %}">Услуги</a>
+        <a {% if request.resolver_match.url_name == 'solutions' or request.resolver_match.url_name == 'solution-client-portal' or request.resolver_match.url_name == 'solution-order-flow' or request.resolver_match.url_name == 'solution-service-desk' %}aria-current="page"{% endif %} href="{% url 'main:solutions' %}">Решения</a>
+        <a {% if request.resolver_match.url_name == 'technology' %}aria-current="page"{% endif %} href="{% url 'main:technology' %}">Технологии</a>
       </nav>
     </header>

@@ -11,7 +11,6 @@
   name="description"
   content="Тестовая схема обмена заказами и статусами между тремя системами. Названия и записи демонстрационные."
 />
-<link rel="canonical" href="https://devory.digital/solution-order-flow/" />
 <meta property="og:type" content="website" />
 <meta
   property="og:title"
@@ -33,7 +32,6 @@
 <link rel="stylesheet" href="{% static 'main/site.css' %}" />
 <script src="{% static 'main/site.js' %}" type="module" defer></script>
 {% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
-<a class="skip" href="#main">К содержимому</a>
 <main id="main" class="submain">
   <nav class="breadcrumbs" aria-label="Хлебные крошки">
     <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
@@ -131,20 +129,7 @@
       демонстрация структуры решения, а не отчёт о внедрении.
     </p>
   </section>
-  <section class="sub-cta">
-    <div>
-      <p class="dv-label">Следующий шаг</p>
-      <h2>Обсудим вашу задачу</h2>
-      <p>
-        Расскажите, что нужно создать или улучшить. Для первого разговора
-        достаточно описания своими словами.
-      </p>
-    </div>
-    <a class="button primary" href="{% url 'main:contacts' %}"
-      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
-    ></a>
-  </section>
-  <section class="related">
+<section class="related">
     <h2>Другие примеры</h2>
     <div>
       <a class="dv-link" href="{% url 'main:solution-client-portal' %}"

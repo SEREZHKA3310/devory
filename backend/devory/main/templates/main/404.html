@@ -10,14 +10,13 @@
   name="description"
   content="Вернуться на главную Devory или выбрать нужное направление работ."
 />
-<link rel="canonical" href="https://devory.digital" />
+<meta name="robots" content="noindex,follow" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Страница не найдена | DEVORY" />
 <meta
   property="og:description"
   content="Вернуться на главную Devory или выбрать нужное направление работ."
 />
-<meta property="og:url" content="https://devory.digital" />
 <meta property="og:image" content="https://devory.digital/404" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
@@ -26,7 +25,6 @@
 <link rel="stylesheet" href="{% static 'main/site.css' %}" />
 <script src="{% static 'main/site.js' %}" type="module" defer></script>
 {% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
-<a class="skip" href="#main">К содержимому</a>
 <main id="main" class="submain">
   <div class="sub-intro">
     <p class="dv-label">404</p>
@@ -45,9 +43,6 @@
         >Услуги <svg aria-hidden="true"><use href="#arrow" /></svg></a
       ><a class="dv-link" href="{% url 'main:solutions' %}"
         >Решения <svg aria-hidden="true"><use href="#arrow" /></svg></a
-      ><a class="dv-link" href="{% url 'main:contacts' %}"
-        >Обсудить проект <svg aria-hidden="true"><use href="#arrow" /></svg
-      ></a>
     </div>
   </div>
 </main>

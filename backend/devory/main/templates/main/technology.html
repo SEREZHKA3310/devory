@@ -10,7 +10,7 @@
   name="description"
   content="Как Devory проектирует интерфейсы, бизнес-логику, интеграции и инфраструктуру. Критерии выбора стека и подготовки к запуску."
 />
-<link rel="canonical" href="https://devory.digital" />
+<link rel="canonical" href="https://devory.digital/technology/" />
 <meta property="og:type" content="website" />
 <meta
   property="og:title"
@@ -32,7 +32,6 @@
 <link rel="stylesheet" href="{% static 'main/site.css' %}" />
 <script src="{% static 'main/site.js' %}" type="module" defer></script>
 {% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
-<a class="skip" href="#main">К содержимому</a>
 <main id="main" class="submain">
   <nav class="breadcrumbs" aria-label="Хлебные крошки">
     <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
@@ -127,65 +126,6 @@
         </tbody>
       </table>
     </div>
-  </section>
-  <section class="sub-section">
-    <p class="dv-label">Рабочая практика</p>
-    <h2>Предусматриваем поведение<br />за пределами обычного сценария.</h2>
-    <div class="content-grid">
-      <article>
-        <h3>Пользователь ошибся</h3>
-        <p>
-          Интерфейс объясняет, какое поле исправить, и по возможности сохраняет
-          введённые данные.
-        </p>
-      </article>
-      <article>
-        <h3>Внешний сервис недоступен</h3>
-        <p>
-          У интеграции есть определённое поведение при таймауте, повторе запроса
-          и неполном ответе.
-        </p>
-      </article>
-      <article>
-        <h3>Изменение нужно отменить</h3>
-        <p>
-          План выпуска учитывает проверку результата, резервную копию и
-          возможность возврата.
-        </p>
-      </article>
-      <article>
-        <h3>К проекту подключается другой специалист</h3>
-        <p>
-          Структура репозитория и документация помогают разобраться в
-          окружениях, настройках и основных сценариях.
-        </p>
-      </article>
-    </div>
-  </section>
-  <section class="result-slab">
-    <div>
-      <p class="dv-label">Перед запуском</p>
-      <h2>Проверяем систему целиком.</h2>
-    </div>
-    <ul>
-      <li>Основные сценарии и пользовательские роли</li>
-      <li>Пустые состояния, ошибки и недоступность сервисов</li>
-      <li>Мобильные экраны и управление с клавиатуры</li>
-      <li>Настройки окружения, доступы и порядок развёртывания</li>
-    </ul>
-  </section>
-  <section class="sub-cta">
-    <div>
-      <p class="dv-label">Следующий шаг</p>
-      <h2>Разберём вашу систему</h2>
-      <p>
-        Опишите текущий продукт, интеграции и ограничения. Это поможет
-        определить, что стоит сохранить и что нужно изменить.
-      </p>
-    </div>
-    <a class="button primary" href="{% url 'main:contacts' %}"
-      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
-    ></a>
   </section>
 </main>
 {% endblock %}

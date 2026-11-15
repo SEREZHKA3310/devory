@@ -4,9 +4,7 @@ from django.shortcuts import render
 # Страницы сайта (имена файлов в main/templates/main/ без .html).
 # Список выводит convert_to_django.py — вставь его сюда, если страниц стало больше.
 PAGES = [
-    "about",
     "automation",
-    "contacts",
     "development",
     "growth",
     "services",

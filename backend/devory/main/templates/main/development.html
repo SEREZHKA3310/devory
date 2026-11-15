@@ -10,7 +10,7 @@
   name="description"
   content="Проектируем и разрабатываем веб-продукты и сервисы: от требований и прототипа до запуска и сопровождения. Результат можно использовать и развивать."
 />
-<link rel="canonical" href="https://devory.digital" />
+<link rel="canonical" href="https://devory.digital/development/" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Разработка продуктов | DEVORY" />
 <meta
@@ -29,7 +29,6 @@
 <link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
 <link rel="stylesheet" href="{% static 'main/site.css' %}" />
 <script src="{% static 'main/site.js' %}" type="module" defer></script>
-<script src="{% static 'main/barchart.js' %}" type="module" defer></script>
 {% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
 <main id="main" class="submain">
   <nav class="breadcrumbs" aria-label="Хлебные крошки">
@@ -49,8 +48,8 @@
         прототипа до запуска. Результат можно использовать, поддерживать и
         развивать дальше.
       </p>
-      <a class="button primary" href="{% url 'main:contacts' %}"
-        >Подготовить задачу <svg aria-hidden="true"><use href="#arrow" /></svg
+      <a class="button primary" href="{% url 'main:solutions' %}"
+        >Посмотреть решения <svg aria-hidden="true"><use href="#arrow" /></svg
       ></a>
     </div>
 
@@ -165,60 +164,6 @@
   </section>
 
   <section class="sub-section">
-    <p class="dv-label">Наглядность</p>
-    <h2>Наведём красоту</h2>
-    <p>
-      Анимированная диаграмма превращает сухие цифры в понятную картинку, где
-      главное видно с первого взгляда.
-    </p>
-    <table class="revenue-table" hidden>
-      <tr class="revenue-table__head">
-        <th>Месяц</th>
-        <th>
-          Выручка, ₽
-          <tr class="revenue-table__row">
-            <td>Янв 2026</td>
-            <td>
-              42 000
-              <tr class="revenue-table__row">
-                <td>Фев 2026</td>
-                <td>
-                  58 000
-                  <tr class="revenue-table__row">
-                    <td>Мар 2026</td>
-                    <td>
-                      51 000
-                      <tr class="revenue-table__row">
-                        <td>Апр 2026</td>
-                        <td>
-                          73 000
-                          <tr class="revenue-table__row">
-                            <td>Май 2026</td>
-                            <td>
-                              96 000
-                              <tr class="revenue-table__row">
-                                <td>Июн 2026</td>
-                                <td>88 000</td>
-                              </tr>
-                            </td>
-                          </tr>
-                        </td>
-                      </tr>
-                    </td>
-                  </tr>
-                </td>
-              </tr>
-            </td>
-          </tr>
-        </th>
-      </tr>
-    </table>
-    <div class="revenue-chart">
-      <span class="revenue-chart__tip" hidden></span>
-    </div>
-  </section>
-
-  <section class="sub-section">
     <p class="dv-label">До начала работ</p>
     <h2>Частые вопросы</h2>
     <div class="dv-faq-grid">
@@ -245,22 +190,7 @@
       </details>
     </div>
   </section>
-
-  <section class="sub-cta">
-    <div>
-      <p class="dv-label">Следующий шаг</p>
-      <h2>Обсудим вашу задачу</h2>
-      <p>
-        Расскажите, что нужно создать или улучшить. Для первого разговора
-        достаточно описания своими словами.
-      </p>
-    </div>
-    <a class="button primary" href="{% url 'main:contacts' %}"
-      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
-    ></a>
-  </section>
-
-  <section class="related">
+<section class="related">
     <h2>Другие направления</h2>
     <div>
       <a class="dv-link" href="{% url 'main:automation' %}"

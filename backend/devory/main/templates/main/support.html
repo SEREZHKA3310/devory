@@ -10,7 +10,7 @@
   name="description"
   content="Организуем поддержку цифровых продуктов: мониторинг, разбор ошибок, обновления и развитие. До начала работ согласуем состав системы, порядок обращений и границы ответственности."
 />
-<link rel="canonical" href="https://devory.digital" />
+<link rel="canonical" href="https://devory.digital/support/" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Поддержка и инфраструктура | DEVORY" />
 <meta
@@ -29,7 +29,6 @@
 <link rel="stylesheet" href="{% static 'main/site.css' %}" />
 <script src="{% static 'main/site.js' %}" type="module" defer></script>
 {% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
-<a class="skip" href="#main">К содержимому</a>
 <main id="main" class="submain">
   <nav class="breadcrumbs" aria-label="Хлебные крошки">
     <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
@@ -46,8 +45,8 @@
         обновления и развитие. До начала работ согласуем состав системы, порядок
         обращений и границы ответственности.
       </p>
-      <a class="button primary" href="{% url 'main:contacts' %}"
-        >Подготовить задачу <svg aria-hidden="true"><use href="#arrow" /></svg
+      <a class="button primary" href="{% url 'main:solutions' %}"
+        >Посмотреть решения <svg aria-hidden="true"><use href="#arrow" /></svg
       ></a>
     </div>
     <div class="service-object" aria-hidden="true">
@@ -185,20 +184,7 @@
       </details>
     </div>
   </section>
-  <section class="sub-cta">
-    <div>
-      <p class="dv-label">Следующий шаг</p>
-      <h2>Обсудим вашу задачу</h2>
-      <p>
-        Расскажите, что нужно создать или улучшить. Для первого разговора
-        достаточно описания своими словами.
-      </p>
-    </div>
-    <a class="button primary" href="{% url 'main:contacts' %}"
-      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
-    ></a>
-  </section>
-  <section class="related">
+<section class="related">
     <h2>Другие направления</h2>
     <div>
       <a class="dv-link" href="{% url 'main:development' %}"

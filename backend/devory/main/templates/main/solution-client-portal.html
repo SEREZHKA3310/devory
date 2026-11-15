@@ -1,164 +1,191 @@
 {% extends "main/base.html" %} {% load static %} {% block head %}
 <meta charset="utf-8" />
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, viewport-fit=cover"
-/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#0b0c0d" />
-<title>Личный кабинет клиента — тестовый пример | DEVORY</title>
-<meta name="robots" content="noindex,follow" />
-<meta
-  name="description"
-  content="Тестовый пример кабинета для заявок, документов и истории взаимодействия. Данные вымышлены и используются для демонстрации интерфейса."
-/>
-<link rel="canonical" href="https://devory.digital" />
-<meta property="og:type" content="website" />
-<meta
-  property="og:title"
-  content="Личный кабинет клиента — тестовый пример | DEVORY"
-/>
-<meta
-  property="og:description"
-  content="Тестовый пример кабинета для заявок, документов и истории взаимодействия. Данные вымышлены и используются для демонстрации интерфейса."
-/>
-<meta
-  property="og:url"
-  content="https://devory.digital/solution-client-portal/"
-/>
-<meta
-  property="og:image"
-  content="{{ request.scheme }}://{{ request.get_host }}{% static 'main/assets/scene.png' %}"
-/>
-<meta name="twitter:card" content="summary_large_image" />
+<title>Рекламный кабинет клиента — демо | DEVORY</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="description" content="Демонстрационный рекламный кабинет с вымышленными данными кампаний Яндекс Директа." />
 <link rel="icon" href="{% static 'main/favicon.svg' %}" type="image/svg+xml" />
 <link rel="stylesheet" href="{% static 'main/styles.css' %}" />
 <link rel="stylesheet" href="{% static 'main/page-v3.css' %}" />
 <link rel="stylesheet" href="{% static 'main/site.css' %}" />
+<link rel="stylesheet" href="{% static 'main/campaign-dashboard.css' %}" />
 <script src="{% static 'main/site.js' %}" type="module" defer></script>
-{% endblock %} {% block body_class %}subpage{% endblock %} {% block content %}
-<a class="skip" href="#main">К содержимому</a>
-<main id="main" class="submain">
+<script src="{% static 'main/campaign-dashboard.js' %}" defer></script>
+{% endblock %} {% block body_class %}subpage campaign-dashboard-page{% endblock %} {% block content %}
+<main id="main" class="campaign-dashboard">
   <nav class="breadcrumbs" aria-label="Хлебные крошки">
-    <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span
-    ><a href="{% url 'main:solutions' %}">Решения</a
-    ><span aria-hidden="true">/</span
-    ><span aria-current="page">Личный кабинет клиента</span>
+    <a href="{% url 'main:index' %}">Главная</a><span aria-hidden="true">/</span>
+    <a href="{% url 'main:solutions' %}">Решения</a><span aria-hidden="true">/</span>
+    <span aria-current="page">Рекламный кабинет</span>
   </nav>
-  <div class="sub-intro">
-    <p class="dv-label">Веб-продукт</p>
-    <h1>Личный кабинет клиента</h1>
-    <p class="sub-lead">
-      Тестовый пример кабинета для заявок, документов и истории взаимодействия.
-      Данные вымышлены и используются для демонстрации интерфейса.
-    </p>
+
+  <section class="campaign-heading" aria-labelledby="campaign-title">
+    <div>
+      <p class="dv-label">Решение для клиента</p>
+      <h1 id="campaign-title">Рекламный кабинет</h1>
+      <p class="campaign-lead">Кампании, расходы и ключевые фразы в одном месте.</p>
+    </div>
+    <div class="campaign-account">
+      <span class="account-avatar" aria-hidden="true">D</span>
+      <span><small>Режим работы</small><strong>Мок-кабинет</strong></span>
+      <span class="account-menu-mark" aria-hidden="true">⌄</span>
+    </div>
+  </section>
+
+  <aside class="campaign-demo-note" aria-label="Режим демонстрации">
+    <span class="demo-note-icon" aria-hidden="true">i</span>
+    <p><strong>Демо-режим.</strong> Данные вымышлены. Можно создавать и редактировать мок-объекты; запросы в Яндекс Директ не отправляются.</p>
+    <span class="demo-live"><i aria-hidden="true"></i> Подключение не настроено</span>
+  </aside>
+
+  <section class="campaign-overview" aria-labelledby="overview-heading">
+    <div class="section-heading overview-heading">
+      <div><p class="dv-label">Сводка аккаунта</p><h2 id="overview-heading">Показатели кампаний</h2></div>
+      <div class="period-picker" role="group" aria-label="Период отчёта">
+        <button type="button" data-period="7" aria-pressed="false">7 дней</button>
+        <button type="button" data-period="30" aria-pressed="true">30 дней</button>
+      </div>
+    </div>
+
+    <div class="campaign-metrics">
+      <article class="metric-card metric-spend">
+        <div class="metric-top"><span>Расход</span><span class="metric-icon" aria-hidden="true">₽</span></div>
+        <strong class="metric-value" data-metric data-seven="87&nbsp;120&nbsp;₽" data-thirty="352&nbsp;480&nbsp;₽">352&nbsp;480&nbsp;₽</strong>
+        <span class="metric-foot"><i class="trend-up" aria-hidden="true">↗</i> 8,4% к прошлому периоду</span>
+        <div class="metric-spark spark-spend" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="metric-card">
+        <div class="metric-top"><span>Показы</span><span class="metric-symbol" aria-hidden="true">◉</span></div>
+        <strong class="metric-value" data-metric data-seven="310&nbsp;200" data-thirty="1&nbsp;280&nbsp;450">1&nbsp;280&nbsp;450</strong>
+        <span class="metric-foot"><i class="trend-up" aria-hidden="true">↗</i> 5,2% к прошлому периоду</span>
+        <div class="metric-spark spark-impressions" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="metric-card">
+        <div class="metric-top"><span>Клики</span><span class="metric-symbol" aria-hidden="true">↗</span></div>
+        <strong class="metric-value" data-metric data-seven="4&nbsp;760" data-thirty="19&nbsp;250">19&nbsp;250</strong>
+        <span class="metric-foot"><i class="trend-up" aria-hidden="true">↗</i> 3,1% к прошлому периоду</span>
+        <div class="metric-spark spark-clicks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="metric-card">
+        <div class="metric-top"><span>Конверсии</span><span class="metric-symbol" aria-hidden="true">◎</span></div>
+        <strong class="metric-value" data-metric data-seven="151" data-thirty="618">618</strong>
+        <span class="metric-foot"><i class="trend-up" aria-hidden="true">↗</i> 11,6% к прошлому периоду</span>
+        <div class="metric-spark spark-conversions" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+    </div>
+
+    <div class="campaign-analytics-grid">
+      <article class="dashboard-panel spend-panel">
+        <div class="panel-heading">
+          <div><p class="panel-kicker">Динамика</p><h3>Расход по дням</h3></div>
+          <span class="panel-current"><i aria-hidden="true"></i><span data-chart-period>30 дней</span></span>
+        </div>
+        <div class="spend-chart" data-values-seven="35,48,42,64,58,76,69" data-values-thirty="33,40,37,50,45,62,55,71,66,59,78,65,72,83,68,74,61,88,76,69,80,72,91,78,85,70,96,81,89,100" role="img" aria-label="Демо-график расходов по дням">
+          <div class="chart-guides" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="chart-bars" aria-hidden="true"></div>
+          <div class="chart-axis" aria-hidden="true"><span data-axis-start>17.10</span><span data-axis-middle>01.11</span><span data-axis-end>15.11</span></div>
+        </div>
+        <div class="chart-summary"><span>Сумма за период</span><strong data-chart-total>352&nbsp;480&nbsp;₽</strong></div>
+      </article>
+
+      <article class="dashboard-panel type-panel">
+        <div class="panel-heading"><div><p class="panel-kicker">Распределение</p><h3>Расход по типам</h3></div><span class="panel-caption">За 30 дней</span></div>
+        <div class="type-total"><strong>352&nbsp;480&nbsp;₽</strong><span>общий расход</span></div>
+        <div class="type-bars">
+          <div class="type-row"><div><span>Текстовая кампания</span><strong>176&nbsp;200&nbsp;₽</strong></div><div class="type-track"><i style="--bar-width:50%"></i></div></div>
+          <div class="type-row"><div><span>Единая перфоманс-кампания</span><strong>124&nbsp;800&nbsp;₽</strong></div><div class="type-track"><i style="--bar-width:35.4%"></i></div></div>
+          <div class="type-row"><div><span>Мобильное приложение</span><strong>51&nbsp;480&nbsp;₽</strong></div><div class="type-track"><i style="--bar-width:14.6%"></i></div></div>
+        </div>
+        <p class="type-footnote">Суммы приведены в рублях и округлены для демонстрации.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="dashboard-section object-manager" aria-labelledby="campaigns-heading">
+    <div class="section-heading manager-heading">
+      <div><p class="dv-label">Управление Директом</p><h2 id="campaigns-heading">Объекты рекламодателя</h2></div>
+      <label class="manager-client-label" for="manager-client">Демо-компания
+        <select id="manager-client" aria-label="Выбрать демонстрационную компанию"></select>
+      </label>
+    </div>
+    <div class="manager-toolbar">
+      <div class="manager-tabs" role="group" aria-label="Объекты Директа">
+        <button type="button" aria-pressed="true" data-manager-tab="campaigns">Кампании</button>
+        <button type="button" aria-pressed="false" data-manager-tab="groups">Группы</button>
+        <button type="button" aria-pressed="false" data-manager-tab="ads">Объявления</button>
+        <button type="button" aria-pressed="false" data-manager-tab="keywords">Фразы и ставки</button>
+        <button type="button" aria-pressed="false" data-manager-tab="audiences">Аудитории</button>
+        <button type="button" aria-pressed="false" data-manager-tab="modifiers">Корректировки</button>
+      </div>
+      <div class="manager-tools">
+        <label class="manager-search-label"><span class="visually-hidden">Поиск по объектам</span><input type="search" id="manager-search" placeholder="Найти объект" /></label>
+        <button type="button" class="button primary manager-add" id="manager-add">Создать кампанию <span aria-hidden="true">＋</span></button>
+      </div>
+    </div>
+    <div class="dashboard-panel manager-table-panel">
+      <div class="table-scroll" id="manager-table-wrap"></div>
+      <div class="manager-empty" id="manager-empty" hidden>Объекты не найдены. Создайте первый или измените поиск.</div>
+      <div class="table-note manager-note"><span id="manager-count">0 объектов</span><span>Действия изменяют только демонстрационные данные в этой вкладке.</span></div>
+    </div>
+  </section>
+
+  <div class="dashboard-two-column">
+    <section class="dashboard-section settings-section" aria-labelledby="settings-heading">
+      <div class="section-heading"><div><p class="dv-label">Параметры</p><h2 id="settings-heading">Настройки кампаний</h2></div></div>
+      <article class="dashboard-panel settings-panel">
+        <div class="settings-campaign-select"><span class="settings-campaign-mark" aria-hidden="true">D</span><label for="settings-campaign"><small>Настройки кампании</small><select id="settings-campaign"><option value="search">Поиск — бренд «Север»</option><option value="unified">Каталог — товары</option><option value="mobile">Приложение — установки</option></select></label><button type="button" class="edit-settings-button" data-settings-open>Редактировать</button></div>
+        <dl class="settings-list">
+          <div><dt>Стратегия</dt><dd data-setting="strategy">Максимум кликов</dd></div>
+          <div><dt>Бюджет на неделю</dt><dd data-setting="budget">42&nbsp;000&nbsp;₽</dd></div>
+          <div><dt>Фактический расход за 30 дней</dt><dd data-setting="spend">158&nbsp;460&nbsp;₽</dd></div>
+          <div><dt>Расписание</dt><dd data-setting="schedule">Ежедневно, 09:00–21:00</dd></div>
+          <div><dt>Регионы показа</dt><dd data-setting="regions">Москва и Московская область</dd></div>
+          <div class="settings-negative"><dt>Минус-фразы</dt><dd data-setting="negatives">бесплатно, работа, скачать</dd></div>
+        </dl>
+        <p class="settings-hint">Фактический расход — статистика. Здесь редактируются только вымышленные параметры; состояние сбросится после перезагрузки страницы.</p>
+      </article>
+    </section>
+
+    <section class="dashboard-section balance-section" aria-labelledby="balance-heading">
+      <div class="section-heading"><div><p class="dv-label">Финансы</p><h2 id="balance-heading">Баланс счёта</h2></div></div>
+      <article class="dashboard-panel balance-panel">
+        <div class="balance-top"><span class="balance-icon" aria-hidden="true">₽</span><span class="balance-caption">Демо-данные<br />вымышленный счёт</span><span class="balance-menu" aria-hidden="true">•••</span></div>
+        <p class="balance-label">Доступно на счёте</p>
+        <strong class="balance-amount">63&nbsp;240<span> ₽</span></strong>
+        <div class="balance-divider"></div>
+        <div class="balance-detail"><span>Начисления за период</span><strong>400&nbsp;000&nbsp;₽</strong></div>
+        <div class="balance-detail"><span>Расход за период</span><strong>352&nbsp;480&nbsp;₽</strong></div>
+        <p class="balance-note">Баланс и начисления вымышлены и служат только для демонстрации.</p>
+      </article>
+    </section>
   </div>
-  <p class="demo-notice">
-    <strong>Тестовый пример / Демо-компания «Север».</strong> Все данные
-    вымышлены. Это не коммерческий кейс.
-  </p>
-  <section class="demo-large">
-    <div class="demo-large-top">
-      <span>Демо-компания «Север»</span><span class="demo-badge">Демо</span>
-    </div>
-    <h2>Личный кабинет клиента</h2>
-    <div class="decision-table">
-      <table>
-        <caption>
-          Демонстрационные записи
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">Запись</th>
-            <th scope="col">Состояние</th>
-            <th scope="col">Данные</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Заявка #1042</th>
-            <td>Согласование</td>
-            <td>04.11.2026</td>
-          </tr>
-          <tr>
-            <th scope="row">Заявка #1041</th>
-            <td>В работе</td>
-            <td>03.11.2026</td>
-          </tr>
-          <tr>
-            <th scope="row">Заявка #1038</th>
-            <td>Завершена</td>
-            <td>01.11.2026</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-  <section class="sub-section split-copy">
-    <div>
-      <p class="dv-label">Задача примера</p>
-      <h2>Что нужно организовать</h2>
-      <p>
-        Клиенту нужен один экран, где он может создать обращение, приложить файл
-        и проверить текущий статус. Сотруднику нужен общий список обращений с
-        ответственными и историей изменений.
-      </p>
-    </div>
-    <div>
-      <p class="dv-label">Состав решения</p>
-      <h2>Основные функции</h2>
-      <ul class="plain-list">
-        <li>Вход и роли клиента и менеджера</li>
-        <li>Заявки с файлами и комментариями</li>
-        <li>Статусы и история событий</li>
-        <li>Раздел документов и уведомлений</li>
-      </ul>
-    </div>
-  </section>
-  <section class="sub-section">
-    <p class="dv-label">Сценарий</p>
-    <h2>Как проходит работа</h2>
-    <ol class="scenario-steps">
-      <li>Клиент создаёт заявку</li>
-      <li>Менеджер уточняет детали</li>
-      <li>Статус обновляется в кабинете</li>
-      <li>Результат сохраняется в истории</li>
-    </ol>
-  </section>
-  <section class="result-slab">
-    <div>
-      <p class="dv-label">Что показывает пример</p>
-      <h2>Проверяемый маршрут<br />пользователя и данных.</h2>
-    </div>
-    <p>
-      В тестовом сценарии клиент видит свои обращения и документы, а менеджер
-      работает с общей очередью. Коммерческие результаты и клиентские метрики не
-      заявляются.
-    </p>
-  </section>
-  <section class="sub-cta">
-    <div>
-      <p class="dv-label">Следующий шаг</p>
-      <h2>Обсудим вашу задачу</h2>
-      <p>
-        Расскажите, что нужно создать или улучшить. Для первого разговора
-        достаточно описания своими словами.
-      </p>
-    </div>
-    <a class="button primary" href="{% url 'main:contacts' %}"
-      >Подготовить бриф <svg aria-hidden="true"><use href="#arrow" /></svg
-    ></a>
-  </section>
-  <section class="related">
-    <h2>Другие примеры</h2>
-    <div>
-      <a class="dv-link" href="{% url 'main:solution-order-flow' %}"
-        >Заказ между сайтом, CRM и учётом
-        <svg aria-hidden="true"><use href="#arrow" /></svg></a
-      ><a class="dv-link" href="{% url 'main:solution-service-desk' %}"
-        >Рабочее место команды поддержки
-        <svg aria-hidden="true"><use href="#arrow" /></svg
-      ></a>
-    </div>
-  </section>
+
+  <div class="dashboard-two-column lower-panels notifications-only">
+    <section class="dashboard-section notifications-section" aria-labelledby="notifications-heading">
+      <div class="section-heading"><div><p class="dv-label">Контроль расходов</p><h2 id="notifications-heading">Уведомления</h2></div></div>
+      <article class="dashboard-panel notification-panel">
+        <div class="notification-icon" aria-hidden="true">↗</div>
+        <div class="notification-copy"><strong>Порог расхода — 80%</strong><p>В полной версии при достижении порога отправляется сообщение и предлагается остановить кампанию.</p></div>
+        <span class="notification-demo">Демо</span>
+        <div class="notification-rule"><span>Канал уведомлений</span><strong>Не подключён</strong></div>
+        <div class="notification-rule"><span>Текущий расход бюджета</span><strong>64% <i class="budget-progress"><b></b></i></strong></div>
+      </article>
+    </section>
+  </div>
+
+  <footer class="dashboard-footer-note"><span class="footer-demo-dot" aria-hidden="true"></span><p>Демонстрационный интерфейс Devory. Кампании, показатели, баланс и статусы придуманы. Данные не загружаются и не изменяются в Яндекс Директе.</p></footer>
 </main>
+
+<dialog class="budget-dialog object-dialog" id="object-dialog" aria-labelledby="object-dialog-title">
+  <form method="dialog" class="budget-dialog-form" id="object-form">
+    <button type="button" class="dialog-close" data-object-close aria-label="Закрыть">×</button>
+    <p class="dv-label" id="object-dialog-kind">Мок-объект</p>
+    <h2 id="object-dialog-title">Параметры объекта</h2>
+    <p class="object-dialog-note">Изменения действуют только в этом демонстрационном кабинете.</p>
+    <div class="object-editor-fields" id="object-editor-fields"></div>
+    <div class="dialog-actions"><button type="button" class="dialog-cancel" data-object-close>Отмена</button><button type="submit" class="button primary" value="save">Сохранить</button></div>
+  </form>
+</dialog>
+<div class="dashboard-toast" id="dashboard-toast" role="status" aria-live="polite" hidden></div>
 {% endblock %}

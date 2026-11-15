@@ -7,6 +7,8 @@ app_name = "main"
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("about/", RedirectView.as_view(pattern_name="main:index", permanent=True)),
+    path("about.html", RedirectView.as_view(pattern_name="main:index", permanent=True)),
     path("index.html", RedirectView.as_view(pattern_name="main:index", permanent=True)),
     path("robots.txt", TemplateView.as_view(template_name="main/robots.txt", content_type="text/plain")),
     path("sitemap.xml", TemplateView.as_view(template_name="main/sitemap.xml", content_type="application/xml")),

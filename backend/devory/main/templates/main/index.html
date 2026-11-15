@@ -235,8 +235,8 @@
       и измеримый результат.
     </p>
     <div class="actions">
-      <a class="button primary" href="{% url 'main:contacts' %}"
-        >Обсудить задачу <svg><use href="#arrow" /></svg></a
+      <a class="button primary" href="{% url 'main:services' %}"
+        >Услуги <svg><use href="#arrow" /></svg></a
       ><a class="button secondary" href="{% url 'main:solutions' %}"
         ><svg class="play" viewBox="0 0 24 24">
           <path d="m7 4 13 8-13 8V4Z" /></svg
@@ -473,6 +473,36 @@
             ></span></div
         ></a>
       </article>
+      <article class="demo-card" data-demo-type="support">
+        <a href="{% url 'main:solution-service-desk' %}"
+          ><div class="demo-preview support">
+            <span class="demo-badge">Тестовый пример</span>
+            <div class="preview-screen">
+              <div class="preview-top"><i></i><i></i><i></i></div>
+              <strong>Рабочее место команды поддержки</strong>
+              <div class="preview-row">
+                <span>Обращение DEMO-078</span><b>Высокий приоритет</b>
+              </div>
+              <div class="preview-row">
+                <span>Обращение DEMO-077</span><b>Обычный приоритет</b>
+              </div>
+              <div class="preview-row">
+                <span>Обращение DEMO-076</span><b>Обычный приоритет</b>
+              </div>
+            </div>
+          </div>
+          <div class="demo-copy">
+            <p class="dv-label">Внутренний сервис</p>
+            <h2>Рабочее место команды поддержки</h2>
+            <p>
+              Тестовый пример внутренней системы обращений. Показывает очередь
+              задач, приоритеты и распределение ответственности.
+            </p>
+            <span class="dv-link"
+              >Открыть пример <svg aria-hidden="true"><use href="#arrow" /></svg
+            ></span></div
+        ></a>
+      </article>
     </div>
   </section>
   <section class="dv-handover" id="about" aria-labelledby="about-title">
@@ -594,8 +624,8 @@
           Поддержка — отдельная часть проекта. Заранее определяем, что
           наблюдаем, как обрабатываем обращения и как выпускаем изменения.
         </p>
-        <a class="dv-link" href="{% url 'main:contacts' %}"
-          >Обсудить поддержку <svg><use href="#arrow" /></svg
+        <a class="dv-link" href="{% url 'main:support' %}"
+          >Поддержка <svg><use href="#arrow" /></svg
         ></a>
       </div>
       <div class="infra-rack">
@@ -663,23 +693,6 @@
       </details>
     </div>
   </section>
-  <section class="dv-contact" id="contact" aria-labelledby="contact-title">
-    <div class="dv-section contact-foundry">
-      <div class="foundry-light" aria-hidden="true"></div>
-      <p class="dv-label">Начнём с вашей задачи</p>
-      <h2 id="contact-title">Есть что<br /><em>создать?</em></h2>
-      <div class="foundry-action">
-        <p>
-          Новая идея, сложный процесс<br />или продукт, которому пора вырасти.
-        </p>
-        <a class="button primary" href="{% url 'main:contacts' %}"
-          >Обсудить проект <svg><use href="#arrow" /></svg
-        ></a>
-      </div>
-      <div class="foundry-baseline">
-        <span>DEVORY</span><span>Digital engineering</span>
-      </div>
-    </div>
-  </section>
+
 </div>
 {% endblock %}
